@@ -6,7 +6,7 @@ def printError(text):
     print(Fore.RED, text, Fore.RESET)
 def configValidate():
     global ameyBotEmojiMain, ameyBotEmojiReplace, timeOutTimeNormal, timeOutTimeMod
-    ameyBotEmojiFile = urlopen("https://ameybot.s3.ap-south-1.amazonaws.com/AmeyBotMain/JSON/internalAmeyBotSetting.json")
+    ameyBotEmojiFile = urlopen("https://github.com/Amey-Gurjar/AmeyBotAssets/raw/main/JSON/internalAmeyBotSetting.json")
     ameyBotEmoji = json.load(ameyBotEmojiFile)
     ameyBotConfigFile = open("AmeyBotConfig.json", "r")
     ameyBotConfig = json.load(ameyBotConfigFile)

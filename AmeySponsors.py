@@ -8,7 +8,7 @@ def printError(text):
     print(Fore.RED, text, Fore.RESET)
 def jsonFetch():
     global internalAmeyBotConfig, sponsorBotSound
-    internalAmeyBotConfigFile = urlopen("https://ameybot.s3.ap-south-1.amazonaws.com/AmeyBotMain/JSON/internalAmeyBotSetting.json")
+    internalAmeyBotConfigFile = urlopen("https://github.com/Amey-Gurjar/AmeyBotAssets/raw/main/JSON/internalAmeyBotSetting.json")
     internalAmeyBotConfig = load(internalAmeyBotConfigFile)
     sponsorBotSound = internalAmeyBotConfig["AmeySounds"]["sponsorSound"]
 def sponsorFileCheck(channelId):

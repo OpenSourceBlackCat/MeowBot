@@ -7,7 +7,7 @@ def printError(text):
     print(Fore.RED, text, Fore.RESET)
 def jsonFetch():
     global soundBye, funnyBotSounds, funnyBotSoundsRaw ,fartBotSounds
-    internalAmeyBotConfigFile = urlopen("https://ameybot.s3.ap-south-1.amazonaws.com/AmeyBotMain/JSON/internalAmeyBotSetting.json")
+    internalAmeyBotConfigFile = urlopen("https://github.com/Amey-Gurjar/AmeyBotAssets/raw/main/JSON/internalAmeyBotSetting.json")
     internalAmeyBotConfig = load(internalAmeyBotConfigFile)
     soundBye = internalAmeyBotConfig["AmeySounds"]["soundBye"]
     funnyBotSounds = internalAmeyBotConfig["AmeySounds"]["funnySounds"]

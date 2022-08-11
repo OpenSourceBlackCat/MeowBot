@@ -10,7 +10,7 @@ def printError(text):
 AmeyBotConfigUrl = "https://ameybot.s3.ap-south-1.amazonaws.com/AmeyBotMain/JSON/AmeyBotConfig.json"
 def jsonFetch():
     global configBotFunction, optionBotConfig, inputBotString
-    internalAmeyBotConfigFile = urlopen("https://ameybot.s3.ap-south-1.amazonaws.com/AmeyBotMain/JSON/internalAmeyBotSetting.json")
+    internalAmeyBotConfigFile = urlopen("https://github.com/Amey-Gurjar/AmeyBotAssets/raw/main/JSON/internalAmeyBotSetting.json")
     internalAmeyBotConfig = load(internalAmeyBotConfigFile)
     configBotFunction = internalAmeyBotConfig["AmeyConfigFile"]["configFunction"]
     optionBotConfig = internalAmeyBotConfig["AmeyConfigFile"]["optionConfig"]

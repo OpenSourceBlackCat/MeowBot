@@ -59,7 +59,7 @@ try:
             return True
     def ameyMainJsonFetch():
         global welcomeFont, BOT_SOUND, API_SERVICE_NAME, API_VERSION, API_SCOPES, API_KEYS, CLIENT_FILES, CLIENT_LINKS, ameyBotEmojiMain, ameyBotEmojiReplace
-        API_CONFIG_FILE = urlopen("https://ameybot.s3.ap-south-1.amazonaws.com/AmeyBotMain/JSON/internalAmeyBotSetting.json")
+        API_CONFIG_FILE = urlopen("https://github.com/Amey-Gurjar/AmeyBotAssets/raw/main/JSON/internalAmeyBotSetting.json")
         API_CONFIG = json.load(API_CONFIG_FILE)
         # BOT STYLE
         welcomeFont = API_CONFIG["AmeyBotStyle"]["welcomeFont"]
