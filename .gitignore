@@ -1,5 +1,7 @@
-__pychache__
-.vscode
-.idea
-.vs
+./__pychache__
+./.vscode
+./.idea
+./.vs
 .mp3
+./build
+./plugins
