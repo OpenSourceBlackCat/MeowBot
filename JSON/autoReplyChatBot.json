@@ -1,0 +1,23 @@
+{
+    "AmeyChatBot": {
+        "chatInput": [
+            "hello",
+            "hi",
+            "kaise ho",
+            "what is your name",
+            "who is your developer",
+            "what languages you speak",
+            "where do you live"
+        ],
+        "chatOutput": [
+            "Hello, How Are You?",
+            "Hi There, How Are You?",
+            "Main Bilkul Theek Hun, Janab Aap Bataiyye.",
+            "Mera Naam AmeyBot Hai",
+            "Amey Gurjar Had Developed Me.",
+            "Python. The Only Language I Know Is Python.",
+            "I Live Inside Computers."
+
+        ]
+    }
+}

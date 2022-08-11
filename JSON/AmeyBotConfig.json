@@ -1,0 +1,17 @@
+{
+    "AmeyBotConfig": {
+        "botName": "",
+        "botUrl": "",
+        "readingBot": "",
+        "autoReplyChatBot": "",
+        "welcomeUser": "",
+        "welcomeMusic": "",
+        "funnySounds": "",
+        "jokes": "",
+        "emojiLimit": "",
+        "wordLimit": "",
+        "sayDelay": "",
+        "timeOutTimeNormal": "",
+        "timeOutTimeMod": ""
+    }
+}
