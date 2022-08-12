@@ -6,7 +6,9 @@ build
 plugins
 dist
 JSON
+AmeyBotTest
 *.mp3
 *.ini
 *.txt
+*.png
 !AmeyChatBot.mp3
