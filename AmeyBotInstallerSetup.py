@@ -91,7 +91,7 @@ def main():
     root.configure(bg='green')
     canvas = Canvas(root, width=300, height=100)
     canvas.pack()
-    ameyBotLogo = "https://ameybot.s3.ap-south-1.amazonaws.com/AmeyBotMain/ameyBotUpdater.png"
+    ameyBotLogo = "https://github.com/Amey-Gurjar/AmeyBotAssets/raw/main/ameyBotUpdater.png"
     image_byt = urlopen(ameyBotLogo).read()
     image_b64 = base64.encodebytes(image_byt)
     img = PhotoImage(data=image_b64)

@@ -7,7 +7,7 @@ def printGood(text):
     print(Fore.GREEN, text, Fore.RESET)
 def printError(text):
     print(Fore.RED, text, Fore.RESET)
-AmeyBotConfigUrl = "https://ameybot.s3.ap-south-1.amazonaws.com/AmeyBotMain/JSON/AmeyBotConfig.json"
+AmeyBotConfigUrl = "https://github.com/Amey-Gurjar/AmeyBotAssets/raw/main/JSON/AmeyBotConfig.json"
 def jsonFetch():
     global configBotFunction, optionBotConfig, inputBotString
     internalAmeyBotConfigFile = urlopen("https://github.com/Amey-Gurjar/AmeyBotAssets/raw/main/JSON/internalAmeyBotSetting.json")

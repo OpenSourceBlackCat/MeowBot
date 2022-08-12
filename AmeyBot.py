@@ -82,7 +82,7 @@ try:
         
     # def botAuthenticator():
     #     global authenticator
-    #     authenticator = "https://ameybot.s3.ap-south-1.amazonaws.com/AmeyBotMain/JSON/authBot.json"
+    #     authenticator = "https://github.com/Amey-Gurjar/AmeyBotAssets/raw/main/JSON/authBot.json"
     #     def authBot():
     #         key = open("key.txt", "r")
     #         keyText = key.readline()
