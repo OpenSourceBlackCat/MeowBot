@@ -313,7 +313,7 @@ try:
                 pass
             else: 
                 pass
-        elif '!joke' in c.message:
+        elif "!joke" in c.message:
             def jokeSend():
                 c.message = c.message.replace("!joke", '')
                 printNor(f"{c.author.name}")
