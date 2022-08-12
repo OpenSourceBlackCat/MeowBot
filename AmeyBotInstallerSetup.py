@@ -1,4 +1,7 @@
 import os, sys
+pipList = ["requests", "colorama"]
+for pip in pipList:
+    os.system(f"pip install {pip}")
 from tkinter import Tk, Label, Button, Canvas, PhotoImage, NW
 import requests
 from urllib.request import urlopen
