@@ -1,3 +1,3 @@
-versionMain = 4.5
-version = "\nAMEY BOT v4.5 Stable"
-channellog = ".\nAdded A Bot Uninstaller.\n"
+versionMain = 1.0
+version = "\nAmeyBot"
+channellog = ".\nInitial Release.\n"
