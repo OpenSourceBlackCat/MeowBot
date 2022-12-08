@@ -12,3 +12,4 @@ AmeyBotTest
 *.txt
 *.png
 !AmeyChatBot.mp3
+testMeow.py

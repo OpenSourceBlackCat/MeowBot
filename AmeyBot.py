@@ -483,7 +483,7 @@ try:
     #Main Chatbot
     def chatBot():
         global vidlink, apiInp
-        vidlink = str(input(Fore.BLUE+"\nEnter Your Youtube Stream Link: "+Fore.RESET))
+        vidlink = str(input(f"{Fore.BLUE}\nEnter Your Youtube Stream Link: {Fore.RESET}"))
         if vidlink != "":
             vidlink = vidlink.replace('https://youtu.be/', '').replace("https://www.youtube.com/watch?v=", "")
             def apiInp():

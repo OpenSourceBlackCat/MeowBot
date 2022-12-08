@@ -1,17 +1,17 @@
+import json
 import emoji
 from colorama import Fore
 from urllib.request import urlopen
-import json
+from googletrans import Translator
+from re import sub as resub, compile as recompile
+translator = Translator(service_urls=["translate.google.com", "translate.google.co.in"])
+emojiPattern = r":(.*?):"
 def printError(text):
     print(Fore.RED, text, Fore.RESET)
 def configValidate():
-    global ameyBotEmojiMain, ameyBotEmojiReplace, timeOutTimeNormal, timeOutTimeMod
-    ameyBotEmojiFile = urlopen("https://github.com/Amey-Gurjar/AmeyBotAssets/raw/main/JSON/internalAmeyBotSetting.json")
-    ameyBotEmoji = json.load(ameyBotEmojiFile)
+    global timeOutTimeNormal, timeOutTimeMod
     ameyBotConfigFile = open("AmeyBotConfig.json", "r")
     ameyBotConfig = json.load(ameyBotConfigFile)
-    ameyBotEmojiMain = ameyBotEmoji["AmeyEmoji"]["emojiMain"]
-    ameyBotEmojiReplace = ameyBotEmoji["AmeyEmoji"]["emojiReplace"]
     emojiLimit = ameyBotConfig["AmeyBotConfig"]["emojiLimit"]
     timeOutTimeNormal = ameyBotConfig["AmeyBotConfig"]["timeOutTimeNormal"]
     timeOutTimeMod = ameyBotConfig["AmeyBotConfig"]["timeOutTimeMod"]
@@ -23,9 +23,8 @@ def emojiCheck(timeInMin, chatMod, insert_comment, Author, chatMessage):
             if counter <= (configValidate()-1):
                 chatMessage = emoji.demojize(chatMessage)
                 try:
-                    for i in range(len(ameyBotEmojiMain)):
-                        if ameyBotEmojiMain[i] in chatMessage:
-                            chatMessage = chatMessage.replace(ameyBotEmojiMain[i],ameyBotEmojiReplace[i])
+                    emojiMain = recompile(emojiPattern).search(chatMessage).replace("_", " ")
+                    chatMessage = resub(pattern=emojiPattern, repl=translator.translate(text=emojiMain, dest="hi"), string=chatMessage)
                 except Exception as e:
                     printError("Some Error In Emoji", e)
             elif counter > configValidate():
