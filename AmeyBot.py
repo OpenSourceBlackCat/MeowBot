@@ -16,7 +16,6 @@ from urllib.request import urlopen
 import os
 from time import sleep
 import pyjokes
-from os.path import exists
 import requests, json
 import wikipedia
 import random
