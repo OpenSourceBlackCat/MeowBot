@@ -1,9 +1,8 @@
 import json
 import emoji
 from colorama import Fore
-from urllib.request import urlopen
 from googletrans import Translator
-from re import sub as resub, compile as recompile
+from re import subn as resubn, findall as refindall
 translator = Translator(service_urls=["translate.google.com", "translate.google.co.in"])
 emojiPattern = r":(.*?):"
 def printError(text):
@@ -23,8 +22,10 @@ def emojiCheck(timeInMin, chatMod, insert_comment, Author, chatMessage):
             if counter <= (configValidate()-1):
                 chatMessage = emoji.demojize(chatMessage)
                 try:
-                    emojiMain = recompile(emojiPattern).search(chatMessage).replace("_", " ")
-                    chatMessage = resub(pattern=emojiPattern, repl=translator.translate(text=emojiMain, dest="hi"), string=chatMessage)
+                    emojiMain = list(map(lambda x: x.replace("_", " "), refindall(emojiPattern, chatMessage)))
+                    print(emojiMain)
+                    for x in emojiMain:
+                        chatMessage = resubn(pattern=emojiPattern, repl=translator.translate(text=x, dest="hi").text, string=chatMessage, count=1)[0]
                 except Exception as e:
                     printError("Some Error In Emoji", e)
             elif counter > configValidate():
