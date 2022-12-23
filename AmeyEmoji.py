@@ -23,7 +23,6 @@ def emojiCheck(timeInMin, chatMod, insert_comment, Author, chatMessage):
                 chatMessage = emoji.demojize(chatMessage)
                 try:
                     emojiMain = list(map(lambda x: x.replace("_", " "), refindall(emojiPattern, chatMessage)))
-                    print(emojiMain)
                     for x in emojiMain:
                         chatMessage = resubn(pattern=emojiPattern, repl=translator.translate(text=x, dest="hi").text, string=chatMessage, count=1)[0]
                 except Exception as e:
