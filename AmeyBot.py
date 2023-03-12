@@ -57,7 +57,7 @@ try:
         else:
             return True
     def ameyMainJsonFetch():
-        global welcomeFont, BOT_SOUND, API_SERVICE_NAME, API_VERSION, API_SCOPES, API_KEYS, CLIENT_FILES, CLIENT_LINKS, ameyBotEmojiMain, ameyBotEmojiReplace
+        global welcomeFont, BOT_SOUND, API_SERVICE_NAME, API_VERSION, API_SCOPES, API_KEYS, CLIENT_FILES, ameyBotEmojiMain, ameyBotEmojiReplace
         API_CONFIG_FILE = urlopen("https://github.com/Amey-Gurjar/AmeyBotAssets/raw/main/JSON/internalAmeyBotSetting.json")
         API_CONFIG = json.load(API_CONFIG_FILE)
         # BOT STYLE
@@ -75,8 +75,6 @@ try:
         API_KEYS = API_CONFIG["AMEYBOTAPI"]["botApiKeys"]
         # CLIENT FILES
         CLIENT_FILES = API_CONFIG["AMEYBOTAPI"]["botClientJsonFiles"]
-        # CLIENT LINKS
-        CLIENT_LINKS = API_CONFIG["AMEYBOTAPI"]["CLIENT_LINKS"]
         return None
         
     # def botAuthenticator():
@@ -121,8 +119,7 @@ try:
             # Get credentials and create an API client
             flow = InstalledAppFlow.from_client_secrets_file(
                 CLIENT_SECRET_FILE, API_SCOPES)
-            webbrowser.open(CLIENT_LINK)
-            credentials = flow.run_console()
+            credentials = flow.run_local_server()
             os.remove(jsonFileName)
             global youtubeMain
             global youtubeBan
@@ -488,7 +485,7 @@ try:
             def apiInp():
                 try:
                     def checkapiversion():
-                        global CLIENT_SECRET_FILE, CLIENT_LINK, API_KEY
+                        global CLIENT_SECRET_FILE, API_KEY
                         inputApiVersion = str(input(Fore.BLUE+"Enter The Api Version (1 To 4, Default 1): "+Fore.RESET))
                         if inputApiVersion == "":
                             inputApiVersion = "1"
@@ -496,10 +493,8 @@ try:
                         if inputApiVersion <= len(API_KEYS): 
                             CLIENT_FILES_MAIN = list(CLIENT_FILES.values())
                             API_KEYS_MAIN = list(API_KEYS.values())
-                            CLIENT_LINKS_MAIN = list(CLIENT_LINKS.values())
                             CLIENT_SECRET_FILE = urltojson(CLIENT_FILES_MAIN[inputApiVersion-1], f"CLIENTJSON{inputApiVersion}.json")
                             API_KEY = API_KEYS_MAIN[inputApiVersion-1]
-                            CLIENT_LINK = CLIENT_LINKS_MAIN[inputApiVersion-1]
                             authChat()
                         else:
                             printError("Invalid API! Please Try Again.")
