@@ -18,7 +18,7 @@ def fileLoader():
     try:
         updateEnter.destroy()
     except: pass
-    requirePips = sorted(["googletrans==4.0.0rc1", "google-auth-httplib2", "google-api-python-client", "google-auth-oauthlib", "requests", "urllib3", "pybase64", "pillow", "pil-tools", "gtts", "pytchat", "pyjokes", "datetime", "wikipedia", "emoji", "pyttsx3", "playsound==1.2.2", "colorama", "pyfiglet", "winshell"])
+    requirePips = sorted(["google-api-python-client", "google-auth-httplib2", "google-auth-oauthlib", "googletrans==4.0.0rc1", "requests", "urllib3", "pybase64", "pillow", "pil-tools", "gtts", "pytchat", "pyjokes", "datetime", "wikipedia", "emoji", "pyttsx3", "playsound==1.2.2", "colorama", "pyfiglet", "winshell"])
     for i in range(len(requirePips)):
         updateLabel = Label(root, text=f"Installing {requirePips[i]}", background='green', foreground='white')
         updateLabel.pack()
