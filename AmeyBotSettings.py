@@ -7,10 +7,10 @@ def printGood(text):
     print(Fore.GREEN, text, Fore.RESET)
 def printError(text):
     print(Fore.RED, text, Fore.RESET)
-AmeyBotConfigUrl = "https://github.com/Amey-Gurjar/AmeyBotAssets/raw/main/JSON/AmeyBotConfig.json"
+AmeyBotConfigUrl = "https://github.com/AmeyaGurjar/AmeyBotAssets/raw/main/JSON/AmeyBotConfig.json"
 def jsonFetch():
     global configBotFunction, optionBotConfig, inputBotString
-    internalAmeyBotConfigFile = urlopen("https://raw.githubusercontent.com/Amey-Gurjar/AmeyBotAssets/main/JSON/internalAmeyBotSetting.json")
+    internalAmeyBotConfigFile = urlopen("https://raw.githubusercontent.com/AmeyaGurjar/AmeyBotAssets/main/JSON/internalAmeyBotSetting.json")
     internalAmeyBotConfig = load(internalAmeyBotConfigFile)
     configBotFunction = internalAmeyBotConfig["AmeyConfigFile"]["configFunction"]
     optionBotConfig = internalAmeyBotConfig["AmeyConfigFile"]["optionConfig"]
