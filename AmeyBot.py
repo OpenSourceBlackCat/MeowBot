@@ -58,7 +58,7 @@ try:
             return True
     def ameyMainJsonFetch():
         global welcomeFont, BOT_SOUND, API_SERVICE_NAME, API_VERSION, API_SCOPES, API_KEYS, CLIENT_FILES, ameyBotEmojiMain, ameyBotEmojiReplace
-        API_CONFIG_FILE = urlopen("https://github.com/Amey-Gurjar/AmeyBotAssets/raw/main/JSON/internalAmeyBotSetting.json")
+        API_CONFIG_FILE = urlopen("https://github.com/AmeyaGurjar/AmeyBotAssets/raw/main/JSON/internalAmeyBotSetting.json")
         API_CONFIG = json.load(API_CONFIG_FILE)
         # BOT STYLE
         welcomeFont = API_CONFIG["AmeyBotStyle"]["welcomeFont"]
@@ -79,7 +79,7 @@ try:
         
     # def botAuthenticator():
     #     global authenticator
-    #     authenticator = "https://github.com/Amey-Gurjar/AmeyBotAssets/raw/main/JSON/authBot.json"
+    #     authenticator = "https://github.com/AmeyaGurjar/AmeyBotAssets/raw/main/JSON/authBot.json"
     #     def authBot():
     #         key = open("key.txt", "r")
     #         keyText = key.readline()
