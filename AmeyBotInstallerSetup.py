@@ -37,7 +37,7 @@ def botFileDownloader(botFileUrl, botFileName):
     global dataDir
     homeDir = os.path.expanduser('~')
     if sys.platform == "win32":
-        dataDir = os.path.join(homeDir, "AppData", "Local", "AmeyBot")
+        dataDir = os.path.join(homeDir, "AppData", "Local", "AmeyaBot")
         if not os.path.exists(dataDir):
             os.mkdir(dataDir)
     else:
@@ -79,9 +79,9 @@ def mainDownload():
         try:
             installLabel.destroy()
         except: pass
-        shortCut(name="AmeyBot.lnk", fileName="__init__.py", dataDir=dataDir, desktopShortcut=True)
-        shortCut(name="AmeyBotUpdater.lnk", fileName="AmeyBotUpdater.py", dataDir=dataDir, desktopShortcut=True)
-        shortCut(name="AmeyBotUninstaller.lnk", fileName="AmeyBotUninstaller.py", dataDir=dataDir)
+        shortCut(name="AmeyaBot.lnk", fileName="__init__.py", dataDir=dataDir, desktopShortcut=True)
+        shortCut(name="AmeyaBotUpdater.lnk", fileName="AmeyBotUpdater.py", dataDir=dataDir, desktopShortcut=True)
+        shortCut(name="AmeyaBotUninstaller.lnk", fileName="AmeyBotUninstaller.py", dataDir=dataDir)
         downloadDone = Label(root, text="AMEY BOT Installed Successfully.", background='green', foreground='white').pack()
     except Exception as e:
         printError("Error!")
