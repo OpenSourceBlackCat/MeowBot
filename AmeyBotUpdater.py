@@ -14,7 +14,7 @@ def fileLoader():
     try:
         noUpdateLabel.destroy()
     except: pass
-    internalAmeyBotConfigFile = urlopen("https://github.com/Amey-Gurjar/AmeyBotAssets/raw/main/JSON/internalAmeyBotSetting.json")
+    internalAmeyBotConfigFile = urlopen("https://github.com/AmeyaGurjar/AmeyBotAssets/raw/main/JSON/internalAmeyBotSetting.json")
     internalAmeyBotConfig = load(internalAmeyBotConfigFile)
     botFiles = internalAmeyBotConfig["AmeyBotUpdaterFiles"]["botFiles"]
     botUrls = []
@@ -67,7 +67,7 @@ def main():
     root.configure(bg='green')
     canvas = Canvas(root, width=300, height=100)
     canvas.pack()
-    ameyBotLogo = "https://github.com/Amey-Gurjar/AmeyBotAssets/raw/main/ameyBotUpdater.png"
+    ameyBotLogo = "https://github.com/AmeyaGurjar/AmeyBotAssets/raw/main/ameyBotUpdater.png"
     image_byt = urlopen(ameyBotLogo).read()
     image_b64 = base64.encodebytes(image_byt)
     img = PhotoImage(data=image_b64)
