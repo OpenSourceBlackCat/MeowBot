@@ -1,3 +1,3 @@
 versionMain = 1.0
-version = "\nAmeyBot"
+version = "\nAmeyaBot"
 channellog = ".\nInitial Release.\n"
