@@ -18,6 +18,7 @@ Like Shown Below:<br>
 ![InstallerGUI](https://github.com/AmeyaGurjar/AmeyBotAssets/raw/main/images/image-3.png)<br><br>
 **STEP 5.** Close The Installer And Enjoy Your AmeyaBot.<br><br>
 # First Time Setup Guide
+**NOTE:** This Bot Requires And Extra Google Account To Use As A Bot Account!<br><br>
 **STEP 1.** Open The AmeyaBot Shortcut From The Desktop.<br>
 **NOTE:** An Terminal Window Will Pop Up Like Shown Below:<br>
 ![AmeyaBot](https://github.com/AmeyaGurjar/AmeyBotAssets/raw/main/images/image-6.png)<br>
