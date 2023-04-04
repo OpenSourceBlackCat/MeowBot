@@ -3,8 +3,7 @@
 AmeyaBot! A YouTube All Rounder Chat Bot For Live Streams.<br>
 # Installation Guide
 **STEP 1.** Download And Install The Latest Python 3.xx.<br>
-**NOTE:** Please Make Sure To Tick "Add Python 3.xx To Path" Option While Installing Python Or Add It Manually To The Path Later
-.<br><br>
+**NOTE:** Please Make Sure To Tick "Add Python 3.xx To Path" Option While Installing Python Or Add It Manually To The Path Later.<br><br>
 **STEP 2.** Download The AmeyBotInstallerSetup.py.<br><br>
 **STEP 3.** Run The AmeyBotInstallerSetup.py.<br>
 **NOTE:** Now An Terminal/CMD Window Will Pop Out With A AmeyaBot Installer GUI<br>
