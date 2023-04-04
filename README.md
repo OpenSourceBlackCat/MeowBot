@@ -15,7 +15,7 @@ Like Shown Below:<br>
 ![InstallerGUI](https://github.com/AmeyaGurjar/AmeyBotAssets/raw/main/images/image-3.png)<br><br>
 **STEP 5.** Close The Installer And Enjoy Your AmeyaBot.<br><br>
 # First Time Setup Guide
-**NOTE:** This Bot Requires And Extra Google Account To Use As A Bot Account!<br><br>
+**NOTE:** This Bot Requires An Extra Google Account To Use As A Bot Account!<br><br>
 **STEP 1.** Open The AmeyaBot Shortcut From The Desktop.<br>
 **NOTE:** An Terminal Window Will Pop Up Like Shown Below:<br>
 ![AmeyaBot](https://github.com/AmeyaGurjar/AmeyBotAssets/raw/main/images/image-6.png)<br>
@@ -85,7 +85,7 @@ time - Enter The Time Duration Between Two "!say" Commands From A User In Second
 ![AmeyaBot](https://github.com/AmeyaGurjar/AmeyBotAssets/raw/main/images/image-20.png)<br>
 Options:<br>
 time - Enter The Time Duration For Timeout For All Users In Seconds.<br><br>
-**STEP 15.** Timeour Duration For Moderators. This Option Can Give Timeout Only To Channel Moderators For The Selected Time Duration.<br>
+**STEP 15.** Timeout Duration For Moderators. This Option Can Give Timeout Only To Channel Moderators For The Selected Time Duration.<br>
 ![AmeyaBot](https://github.com/AmeyaGurjar/AmeyBotAssets/raw/main/images/image-24.png)<br>
 Options:<br>
 time - Enter The Time Duration For Timeout For Only Channel Moderators In Seconds.<br><br>
