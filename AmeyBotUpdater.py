@@ -1,7 +1,8 @@
-from tkinter import Tk, Label, Button, Canvas, PhotoImage, NW
+from tkinter import Tk, Label, Button, Canvas, NW
 import requests
+from PIL import Image, ImageTk
 from urllib.request import urlopen
-import base64
+from io import BytesIO
 from colorama import Fore
 from json import load
 from urllib.request import urlopen
