@@ -26,9 +26,24 @@ That Is AmeyaBot. <br>
 **STEP 3.** Enter Your Bot Account Youtube Channel Link And Press Enter.<br>
 ![AmeyaBot](https://github.com/AmeyaGurjar/AmeyBotAssets/raw/main/images/image-7.png)<br>
 **STEP 4.** Chat Reading Bot. This Option Will Allow Only Selected Category Users To Use "!say" Command.<br>
+![AmeyaBot](https://github.com/AmeyaGurjar/AmeyBotAssets/raw/main/images/image-8.png)<br>
 Options:<br>
 all - All Users Can Use The "!say" Command.<br>
 sponsor - Only Channel Members Can Use The "!say" Command<br>
 mod - Only Channel Moderators Can Use The "!say" Command<br>
 off - No One Can Use The "!say" Command<br>
+**STEP 5.** Say Command Not Required?. This Option Will Allow Select Category Users To Take Benifits Of Reading Chat Without The Use Of "!say" Command<br>
+![AmeyaBot](https://github.com/AmeyaGurjar/AmeyBotAssets/raw/main/images/image-9.png)<br>
+Options:<br>
+all - Chats Will Read Without The "!say" Command For All Users.<br>
+sponsor - Chats Will Read Without The "!say" Command Only For Channel Members.<br>
+mod - Chats Will Be Read Without The "!say" Command Only For Channel Moderators.<br>
+off - Everyone Will Require To Use "!say" Command Use The Chat Reading Feature.<br>
+**STEP 6.** Auto Reply Chat Bot. This Option Will Provide A Auto Reply Feature For Selected Category Users.<br>
+Options: <br>
+all - The Bot Will Auto Reply To All Users.<br>
+sponsor - The Bot Will Auto Reply To Only Channel Members.<br>
+mod - The Bot Will Auto Reply To Only Channel Moderators.<br>
+off - The Bot Will Not Auto Reply To Anyone.<br>
+![AmeyaBot](https://github.com/AmeyaGurjar/AmeyBotAssets/raw/main/images/image-10.png)<br>
 # Follow On Telegram For More Updates: [@AmeyaBotUpdates](https://t.me/AmeyaBotUpdates)
