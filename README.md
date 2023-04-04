@@ -22,7 +22,8 @@ Like Shown Below:<br>
 **NOTE:** An Terminal Window Will Pop Up Like Shown Below:<br>
 ![AmeyaBot](https://github.com/AmeyaGurjar/AmeyBotAssets/raw/main/images/image-6.png)<br>
 That Is AmeyaBot. <br><br>
-**STEP 2.** Enter Your Bot Account Youtube Channel Name And Press Enter.<br><br>
+**STEP 2.** Enter Your Bot Account Youtube Channel Name And Press Enter.<br>
+![AmeyaBot](https://github.com/AmeyaGurjar/AmeyBotAssets/raw/main/images/image-62.png)<br><br>
 **STEP 3.** Enter Your Bot Account Youtube Channel Link And Press Enter.<br>
 ![AmeyaBot](https://github.com/AmeyaGurjar/AmeyBotAssets/raw/main/images/image-7.png)<br><br>
 **STEP 4.** Chat Reading Bot. This Option Will Allow Only Selected Category Users To Use "!say" Command.<br>
