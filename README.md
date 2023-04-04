@@ -40,10 +40,11 @@ sponsor - Chats Will Read Without The "!say" Command Only For Channel Members.<b
 mod - Chats Will Be Read Without The "!say" Command Only For Channel Moderators.<br>
 off - Everyone Will Require To Use "!say" Command Use The Chat Reading Feature.<br>
 **STEP 6.** Auto Reply Chat Bot. This Option Will Provide A Auto Reply Feature For Selected Category Users.<br>
+![AmeyaBot](https://github.com/AmeyaGurjar/AmeyBotAssets/raw/main/images/image-10.png)<br>
 Options: <br>
 all - The Bot Will Auto Reply To All Users.<br>
 sponsor - The Bot Will Auto Reply To Only Channel Members.<br>
 mod - The Bot Will Auto Reply To Only Channel Moderators.<br>
 off - The Bot Will Not Auto Reply To Anyone.<br>
-![AmeyaBot](https://github.com/AmeyaGurjar/AmeyBotAssets/raw/main/images/image-10.png)<br>
+
 # Follow On Telegram For More Updates: [@AmeyaBotUpdates](https://t.me/AmeyaBotUpdates)
