@@ -2,7 +2,7 @@ import os, sys
 pipList = ["requests", "colorama"]
 for pip in pipList:
     os.system(f"pip install {pip}")
-from tkinter import Tk, Label, Button, Canvas, PhotoImage, NW
+from tkinter import Tk, Label, Button, Canvas, PhotoImage, NW, Image
 import requests
 from urllib.request import urlopen
 import base64
@@ -97,7 +97,8 @@ def main():
     ameyBotLogo = "https://github.com/AmeyaGurjar/AmeyBotAssets/raw/main/ameyBotUpdater.png"
     image_byt = urlopen(ameyBotLogo).read()
     image_b64 = base64.encodebytes(image_byt)
-    img = PhotoImage(data=image_b64)
+    img_main = image_b64.resize((300, 100), Image.ANTIALIAS)
+    img = PhotoImage(data=img_main)
     canvas.create_image(1,1, anchor=NW, image=img)
     mainLabel = Label(root, text="Amey Youtube Live Chat Bot", background='green', foreground='white').pack()
     updateEnter = Button(root, text="Install", background='green', foreground='white', command=Thread(target=fileLoader).start)
