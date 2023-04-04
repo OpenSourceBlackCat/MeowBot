@@ -18,4 +18,17 @@ Like Shown Below:<br>
 ![InstallerGUI](https://github.com/AmeyaGurjar/AmeyBotAssets/raw/main/images/image-3.png)<br>
 **STEP 5.** Close The Installer And Enjoy Your AmeyaBot.<br>
 # First Time Setup Guide
+**STEP 1.** Open The AmeyaBot Shortcut From The Desktop.<br>
+**NOTE:** An Terminal Window Will Pop Up Like Shown Below:<br>
+![AmeyaBot](https://github.com/AmeyaGurjar/AmeyBotAssets/raw/main/images/image-6.png)<br>
+That Is AmeyaBot. <br>
+**STEP 2.** Enter Your Bot Account Youtube Channel Name And Press Enter.<br>
+**STEP 3.** Enter Your Bot Account Youtube Channel Link And Press Enter.<br>
+![AmeyaBot](https://github.com/AmeyaGurjar/AmeyBotAssets/raw/main/images/image-7.png)<br>
+**STEP 4.** Chat Reading Bot. This Option Will Allow Only Selected Category Users To Use "!say" Command.<br>
+Options:<br>
+all - All Users Can Use The "!say" Command.<br>
+sponsor - Only Channel Members Can Use The "!say" Command<br>
+mod - Only Channel Moderators Can Use The "!say" Command<br>
+off - No One Can Use The "!say" Command<br>
 # Follow On Telegram For More Updates: [@AmeyaBotUpdates](https://t.me/AmeyaBotUpdates)
