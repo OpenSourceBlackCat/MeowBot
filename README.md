@@ -91,4 +91,19 @@ time - Enter The Time Duration For Timeout For All Users In Seconds.<br><br>
 ![AmeyaBot](https://github.com/AmeyaGurjar/AmeyBotAssets/raw/main/images/image-24.png)<br>
 Options:<br>
 time - Enter The Time Duration For Timeout For Only Channel Moderators In Seconds.<br><br>
+# Usage Guide
+**STEP 1.** Open The AmeyaBot Shortcut From Your Desktop.<br>
+![AmeyaBot](https://github.com/AmeyaGurjar/AmeyBotAssets/raw/main/images/image-12.png)<br><br>
+**STEP 2.** Enter Your Youtube Live Stream Link.<br>
+![AmeyaBot](https://github.com/AmeyaGurjar/AmeyBotAssets/raw/main/images/image-14.png)<br><br>
+**STEP 3.** Enter The API Number Provided By The Developer Upon Registration.<br>
+![AmeyaBot](https://github.com/AmeyaGurjar/AmeyBotAssets/raw/main/images/image-28.png)<br>
+**NOTE:** This Will Open The Google SignIn Page On Your Default Web Browser.<br><br>
+**STEP 4.** Select The Appropriate Google Account For Bot Login.<br>
+![GoogleLogin](https://github.com/AmeyaGurjar/AmeyBotAssets/raw/main/images/image-23.png)<br><br>
+**STEP 5.** Tick All The Required Permissions And Press Continue.<br>
+![GoogleLogin](https://github.com/AmeyaGurjar/AmeyBotAssets/raw/main/images/image-22.png)<br>
+![GoogleLogin](https://github.com/AmeyaGurjar/AmeyBotAssets/raw/main/images/image-26.png)<br>
+**NOTE:** Upon Pressing Continue, You Will See A Message As Showng Below And Your Bot Authentication Will Be Done Successfully.<br>
+![Auth](https://github.com/AmeyaGurjar/AmeyBotAssets/raw/main/images/image-34.png)<br><br>
 # Follow On Telegram For More Updates: [@AmeyaBotUpdates](https://t.me/AmeyaBotUpdates)
