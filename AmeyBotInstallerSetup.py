@@ -98,7 +98,7 @@ def main():
     ameyBotLogo = "https://github.com/AmeyaGurjar/AmeyBotAssets/raw/main/ameyBotUpdater.png"
     image_byt = urlopen(ameyBotLogo).read()
     img_main = Image.open(BytesIO(image_byt))
-    img_b = img_main.resize((300, 100), Image.ANTIALIAS)
+    img_b = img_main.resize((300, 100))
     img = ImageTk.PhotoImage(img_b)
     canvas.create_image(0,0, anchor=NW, image=img)
     mainLabel = Label(root, text="Amey Youtube Live Chat Bot", background='green', foreground='white').pack()
