@@ -70,8 +70,9 @@ def main():
     canvas.pack()
     ameyBotLogo = "https://github.com/AmeyaGurjar/AmeyBotAssets/raw/main/ameyBotUpdater.png"
     image_byt = urlopen(ameyBotLogo).read()
-    image_b64 = base64.encodebytes(image_byt)
-    img = PhotoImage(data=image_b64)
+    img_main = Image.open(BytesIO(image_byt))
+    img_b = img_main.resize((300, 100))
+    img = ImageTk.PhotoImage(img_b)
     canvas.create_image(1,1, anchor=NW, image=img)
     ameyBotLabel = Label(root, text="AMEY BOT", background='green', foreground='white').pack()
     versionLabel = Label(root, text=f"Current Version: {AC.version}", background='green', foreground='white').pack()
