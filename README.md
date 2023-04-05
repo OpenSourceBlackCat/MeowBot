@@ -113,6 +113,6 @@ time - Enter The Time Duration For Timeout For Only Channel Moderators In Second
 Upon Finishing, You May Close The Updater And Enjoy The Latest AmeyaBot.<br><br>
 # Follow On Telegram For More Updates: [@AmeyaBotUpdates](https://t.me/AmeyaBotUpdates)
 # You Can Help Me By Donating
-[<img src="https://github.com/AmeyaGurjar/AmeyBotAssets/raw/main/images/coffee.png" width=50% height=80%>](https://www.buymeacoffee.com/amey992004)<br>
-[<img src="https://github.com/AmeyaGurjar/AmeyBotAssets/raw/main/images/paypal.png" width=50% height=90%>](https://www.paypal.me/AmeyMeow)<br>
-[<img src="https://github.com/AmeyaGurjar/AmeyBotAssets/raw/main/images/upi.png" width=50% height=100%>](https://github.com/AmeyaGurjar/AmeyBotAssets/raw/main/images/phonepe.png)<br>
+[<img src="https://github.com/AmeyaGurjar/AmeyBotAssets/raw/main/images/coffee.png" width=100% height=80%>](https://www.buymeacoffee.com/amey992004)<br>
+[<img src="https://github.com/AmeyaGurjar/AmeyBotAssets/raw/main/images/paypal.png" width=100% height=90%>](https://www.paypal.me/AmeyMeow)<br>
+[<img src="https://github.com/AmeyaGurjar/AmeyBotAssets/raw/main/images/upi.png" width=100% height=100%>](https://github.com/AmeyaGurjar/AmeyBotAssets/raw/main/images/phonepe.png)<br>
