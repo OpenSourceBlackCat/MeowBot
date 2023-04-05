@@ -112,3 +112,6 @@ time - Enter The Time Duration For Timeout For Only Channel Moderators In Second
 **NOTE:** Upon Clicking The Updater Will Update All The Required Files.<br>
 Upon Finishing, You May Close The Updater And Enjoy The Latest AmeyaBot.<br><br>
 # Follow On Telegram For More Updates: [@AmeyaBotUpdates](https://t.me/AmeyaBotUpdates)
+# You Can Help Me By Donating
+![[ByMeACoffee](https://github.com/AmeyaGurjar/AmeyBotAssets/raw/main/images/coffee.png)](https://www.buymeacoffee.com/amey992004)<br>
+![[Paypal](https://github.com/AmeyaGurjar/AmeyBotAssets/raw/main/images/paypal.png)](https://www.paypal.me/AmeyMeow)<br>
