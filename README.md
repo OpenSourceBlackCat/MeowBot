@@ -117,4 +117,4 @@ Upon Finishing, You May Close The Updater And Enjoy The Latest AmeyaBot.<br><br>
 [<img src="https://github.com/AmeyaGurjar/AmeyBotAssets/raw/main/images/paypal.png" width=500rem height=90%>](https://www.paypal.me/AmeyMeow)<br>
 [<img src="https://github.com/AmeyaGurjar/AmeyBotAssets/raw/main/images/upi.png" width=500rem height=100%>](https://github.com/AmeyaGurjar/AmeyBotAssets/raw/main/images/phonepe.png)<br>
 # Special Thanks To The Lead Tester [Prajyot Chavan](https://github.com/prajyotchavan)
-[<img src="https://github.com/AmeyaGurjar/AmeyBotAssets/raw/main/images/upi.png" width=500rem height=100%>](https://github.com/AmeyaGurjar/AmeyBotAssets/raw/main/images/phonepe.png)<br>
+[<img src="https://github.com/AmeyaGurjar/AmeyBotAssets/raw/main/images/upi.png" width=500rem height=100%>](https://github.com/AmeyaGurjar/AmeyBotAssets/raw/main/images/tester_upi.png)<br>
