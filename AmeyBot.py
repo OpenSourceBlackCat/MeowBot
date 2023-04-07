@@ -137,7 +137,7 @@ try:
             insert_comment(messagetext=f"{botNameUpper} BOT IS RUNNING SUCCESSFULLY.")
             chatrun()
         except Exception as e:
-            print(e)
+            printError(e)
             os.remove(jsonFileName)
             apiInp()    
     def insert_comment(messagetext):
@@ -251,7 +251,7 @@ try:
             else:
                 addChat()
         except Exception as e:
-            print(e)
+            printError(e)
 
     def mainBot():
         if c.author.isChatOwner == True:
