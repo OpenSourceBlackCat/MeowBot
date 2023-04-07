@@ -4,7 +4,7 @@ from gtts import gTTS
 import pytchat
 from threading import Thread
 from colorama import Fore
-from logging import basicConfig as basicLogger
+import logging as botLog
 from pyfiglet import figlet_format
 from AmeySounds import funnySounds
 from AmeyBotSettings import configRun
@@ -27,7 +27,7 @@ import json
 from googleapiclient.discovery import build
 from google_auth_oauthlib.flow import InstalledAppFlow
 #Main Program Starts From Here
-botLog = basicLogger(filename="AmeyaBot.log", format="%(asctime)s - %(levelname)s - %(message)s")
+botLog.basicConfig(filename="AmeyaBot.log", format="%(asctime)s - %(levelname)s - %(message)s")
 try:
     def printNor(text):
         botLog.info(text)
