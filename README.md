@@ -2,7 +2,7 @@
 ![AmeyaBot](https://github.com/AmeyaGurjar/AmeyBotAssets/raw/main/ameyBotUpdater.png)<br>
 AmeyaBot! A YouTube All Rounder Chat Bot For Live Streams.<br>
 **Available On:**
-<img src="https://github.com/AmeyaGurjar/AmeyBotAssets/raw/main/images/apple.png" width=10% height=10%>
+<img src="https://github.com/AmeyaGurjar/AmeyBotAssets/raw/main/images/apple.png" width=10rem height=10rem>
 <img src="https://github.com/AmeyaGurjar/AmeyBotAssets/raw/main/images/window.png" width=10% height=10%>
 <img src="https://github.com/AmeyaGurjar/AmeyBotAssets/raw/main/images/linux.png" width=10% height=10%><br>
 # Installation Guide
