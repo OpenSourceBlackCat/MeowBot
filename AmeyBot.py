@@ -263,6 +263,8 @@ try:
             printError(e)
 
     def mainBot():
+        if "!" in c.message:
+            logD(f"{c.author.name} - {c.message}")
         if c.author.isChatOwner == True:
             printError(text=f"{c.datetime} - {c.author.name} - {c.message}")
         elif c.author.isChatModerator == True:
