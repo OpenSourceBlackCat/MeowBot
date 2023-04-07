@@ -1,3 +1,4 @@
+
 # Some Important Python Modules For Runing This Bot.
 from gtts import gTTS
 import pytchat
@@ -26,8 +27,8 @@ import json
 from googleapiclient.discovery import build
 from google_auth_oauthlib.flow import InstalledAppFlow
 #Main Program Starts From Here
+botLog = basicLogger(filename="AmeyaBot.log", format="%(asctime)s - %(levelname)s - %(message)s")
 try:
-    botLog = basicLogger(filename="AmeyaBot.log", format="%(asctime)s - %(levelname)s - %(message)s")
     def printNor(text):
         botLog.info(text)
         print(Fore.BLUE, text, Fore.RESET)
@@ -563,4 +564,4 @@ try:
         printNor(version)
         configValidate()                                       
 except Exception as e:
-    print(e)
+    botLog.critical(e)
