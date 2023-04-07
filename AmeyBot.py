@@ -3,6 +3,7 @@ from gtts import gTTS
 import pytchat
 from threading import Thread
 from colorama import Fore
+from logging import basicConfig as basicLogger
 from pyfiglet import figlet_format
 from AmeySounds import funnySounds
 from AmeyBotSettings import configRun
@@ -14,7 +15,6 @@ from AmeySponsors import sponsorFileCheck
 import webbrowser
 from urllib.request import urlopen
 import os
-from datetime import datetime
 from re import search as research
 from time import sleep
 import pyjokes
@@ -27,19 +27,15 @@ from googleapiclient.discovery import build
 from google_auth_oauthlib.flow import InstalledAppFlow
 #Main Program Starts From Here
 try:
-    def logD(text):
-        timeF= datetime.now().strftime("%d/%m/%Y %H:%M:%S")
-        with open("log.txt", "a") as logFile:
-            logFile.write(f"{timeF} - {text}\n")
-            logFile.close()
+    botLog = basicLogger(filename="AmeyaBot.log", format="%(asctime)s - %(levelname)s - %(message)s")
     def printNor(text):
-        logD(text)
+        botLog.info(text)
         print(Fore.BLUE, text, Fore.RESET)
     def printGood(text):
-        logD(text)
+        botLog.debug(text)
         print(Fore.GREEN, text, Fore.RESET)
     def printError(text):
-        logD(text)
+        botLog.error(text)
         print(Fore.RED, text, Fore.RESET)
     def authorTimer():
         global countTimnerThread
