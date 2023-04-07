@@ -27,13 +27,13 @@ import json
 from googleapiclient.discovery import build
 from google_auth_oauthlib.flow import InstalledAppFlow
 #Main Program Starts From Here
-botLog.basicConfig(filename="AmeyaBot.log", level=botLog.DEBUG, format="%(asctime)s - %(levelname)s - %(message)s")
+botLog.basicConfig(filename="AmeyaBot.log", level=botLog.INFO, format="%(asctime)s - %(levelname)s - %(message)s")
 try:
     def printNor(text):
         botLog.info(text)
         print(Fore.BLUE, text, Fore.RESET)
     def printGood(text):
-        botLog.debug(text)
+        botLog.info(text)
         print(Fore.GREEN, text, Fore.RESET)
     def printError(text):
         botLog.error(text)
