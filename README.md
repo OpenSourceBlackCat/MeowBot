@@ -5,6 +5,8 @@ AmeyaBot! A YouTube All Rounder Chat Bot For Live Streams.<br>
 <img src="https://github.com/AmeyaGurjar/AmeyBotAssets/raw/main/images/apple.png" width=30rem height=30rem>
 <img src="https://github.com/AmeyaGurjar/AmeyBotAssets/raw/main/images/windows.png" width=30rem height=30rem>
 <img src="https://github.com/AmeyaGurjar/AmeyBotAssets/raw/main/images/linux.png" width=30rem height=30rem><br>
+**Get It Now:**
+[Download](https://github.com/AmeyaGurjar/AmeyBot/releases/download/AmeyaBot/AmeyBotInstallerSetup.py)
 # Installation Guide
 **STEP 1.** Download And Install The Latest Python 3.xx.<br>
 **NOTE:** Please Make Sure To Tick "Add Python 3.xx To Path" Option While Installing Python Or Add It Manually To The Path Later.<br><br>
