@@ -489,8 +489,9 @@ try:
     def chatBot():
         global vidlink, apiInp
         vidlink = str(input(f"{Fore.BLUE}\nEnter Your Youtube Stream Link: {Fore.RESET}"))
-        vidlink = research(r"(?:youtube\.com\/watch\?v=|youtu.be\/)([\w\-]+)", vidlink).group(1)
-        if vidlink != "":
+        vidpat = r"https://[wm]+\.youtube\.com/live/([A-Z 0-9]*)|watch\?v=([A-Z 0-9]*)"
+        vidlink = research(vidpat, vidlink).group(1)
+        if vidlink != None:
             def apiInp():
                 try:
                     def checkapiversion():
