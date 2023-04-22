@@ -16,7 +16,7 @@ from AmeySponsors import sponsorFileCheck
 import webbrowser
 from urllib.request import urlopen
 import os
-from re import IGNORECASE, search as research
+#from re import IGNORECASE, search as research
 from time import sleep
 import pyjokes
 import requests, json
@@ -489,8 +489,8 @@ try:
     def chatBot():
         global vidlink, apiInp
         vidlink = str(input(f"{Fore.BLUE}\nEnter Your Youtube Stream Link: {Fore.RESET}"))
-        vidpat = r"https://[wm]+\.youtube\.com/live/([A-Z 0-9]*)|watch\?v=([A-Z 0-9]*)"
-        vidlink = research(vidpat, vidlink, IGNORECASE).group(1)
+        #vidpat = r"https://[wm]+\.youtube\.com/live/([A-Z 0-9]*)|watch\?v=([A-Z 0-9]*)"
+        #vidlink = research(vidpat, vidlink, IGNORECASE).group(1)
         if vidlink != None:
             def apiInp():
                 try:
