@@ -105,7 +105,9 @@ time - Enter The Time Duration For Timeout For Only Channel Moderators In Second
 **NOTE:** This Will Open The Google SignIn Page On Your Default Web Browser.<br><br>
 **STEP 4.** Select The Appropriate Google Account For Bot Login.<br>
 ![GoogleLogin](https://github.com/AmeyaGurjar/AmeyBotAssets/raw/main/images/image-23.png)<br><br>
-**STEP 5.** Tick All The Required Permissions And Press Continue.<br>
+**STEP 5.** Click Continue On This Page.<br>
+![GoogleLogin](https://github.com/AmeyaGurjar/AmeyBotAssets/raw/main/images/image-87.png)<br><br>
+**STEP 6.** Tick All The Required Permissions And Press Continue.<br>
 ![GoogleLogin](https://github.com/AmeyaGurjar/AmeyBotAssets/raw/main/images/image-22.png)<br>
 ![GoogleLogin](https://github.com/AmeyaGurjar/AmeyBotAssets/raw/main/images/image-26.png)<br>
 **NOTE:** Upon Pressing Continue, You Will See A Message As Showng Below And Your Bot Authentication Will Be Done Successfully.<br>
