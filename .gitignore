@@ -11,5 +11,6 @@ AmeyBotTest
 *.ini
 *.txt
 *.png
+!requirements.txt
 !AmeyChatBot.mp3
 testMeow.py
