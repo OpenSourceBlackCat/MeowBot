@@ -3,7 +3,7 @@ from urllib.request import urlopen
 from json import load
 desktopShortcuts = ["AmeyaBot.lnk", "AmeyaBotaUpdater.lnk"]
 startShortcuts = ["AmeyaBot.lnk", "AmeyBotaUpdater.lnk", "AmeyaBotUninstaller.lnk"]
-internalAmeyBotConfig = load(urlopen("https://github.com/AmeyaGurjar/AmeyBotAssets/raw/main/JSON/internalAmeyBotSetting.json"))
+internalAmeyBotConfig = load(urlopen("https://gitlab.com/AmeyaGurjar/ameybotassets/-/raw/main/config/internalAmeyBotSetting.json"))
 startPath = os.path.join(os.path.expanduser("~"), "AppData", "Roaming", "Microsoft", "Windows", "Start Menu", "Programs", "AmeyaBot")
 dataDir = os.path.join(os.path.expanduser("~"), "AppData", "Local", "AmeyaBot")
 desktopPath = winshell.desktop()

@@ -15,7 +15,7 @@ def fileLoader():
     try:
         noUpdateLabel.destroy()
     except: pass
-    internalAmeyBotConfigFile = urlopen("https://github.com/AmeyaGurjar/AmeyBotAssets/raw/main/JSON/internalAmeyBotSetting.json")
+    internalAmeyBotConfigFile = urlopen("https://gitlab.com/AmeyaGurjar/ameybotassets/-/raw/main/config/internalAmeyBotSetting.json")
     internalAmeyBotConfig = load(internalAmeyBotConfigFile)
     botFiles = internalAmeyBotConfig["AmeyBotUpdaterFiles"]["botFiles"]
     botUrls = []
