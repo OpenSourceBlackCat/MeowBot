@@ -9,7 +9,7 @@ def printError(text):
     print(Fore.RED, text, Fore.RESET)
 def configValidate():
     global timeOutTimeNormal, timeOutTimeMod
-    ameyBotConfigFile = open("AmeyBotConfig.json", "r")
+    ameyBotConfigFile = open("config/AmeyBotConfig.json", "r")
     ameyBotConfig = json.load(ameyBotConfigFile)
     emojiLimit = ameyBotConfig["AmeyBotConfig"]["emojiLimit"]
     timeOutTimeNormal = ameyBotConfig["AmeyBotConfig"]["timeOutTimeNormal"]

@@ -8,12 +8,12 @@ def printError(text):
     print(Fore.RED, text, Fore.RESET)
 def jsonFetch():
     global internalAmeyBotConfig, sponsorBotSound
-    internalAmeyBotConfigFile = urlopen("https://github.com/AmeyaGurjar/AmeyBotAssets/raw/main/JSON/internalAmeyBotSetting.json")
+    internalAmeyBotConfigFile = urlopen("https://gitlab.com/AmeyaGurjar/ameybotassets/-/raw/main/config/internalAmeyBotSetting.json")
     internalAmeyBotConfig = load(internalAmeyBotConfigFile)
     sponsorBotSound = internalAmeyBotConfig["AmeySounds"]["sponsorSound"]
 def sponsorFileCheck(channelId):
     jsonFetch()
-    if exists("AmeySponsor.ini") and exists("sponsorSound.ini"):
+    if exists("ini/AmeySponsor.ini") and exists("ini/sponsorSound.ini"):
         sponsorCheck(channelId)
     else:
         ameySponsorFile = internalAmeyBotConfig["AmeySponsor"]["AmeySponsorTxt"]
@@ -21,15 +21,15 @@ def sponsorFileCheck(channelId):
         get(ameySponsorFile)
         get(sponsorSoundFile)
         ameySponsorFile = get(ameySponsorFile, allow_redirects=True)
-        open("AmeySponsor.ini", "wb").write(ameySponsorFile.content)
+        open("ini/AmeySponsor.ini", "wb").write(ameySponsorFile.content)
         sponsorSoundFile = get(sponsorSoundFile, allow_redirects=True)
-        open("sponsorSound.ini", "wb").write(sponsorSoundFile.content)
+        open("ini/sponsorSound.ini", "wb").write(sponsorSoundFile.content)
         sponsorFileCheck()
         
 def sponsorCheck(channelId):
     try:
-        AmeySponsor = open("AmeySponsor.ini", "r")
-        soundSponsor = open("sponsorSound.ini", "r")
+        AmeySponsor = open("ini/AmeySponsor.ini", "r")
+        soundSponsor = open("ini/sponsorSound.ini", "r")
         AmeySponsor = AmeySponsor.read()
         AmeySponsor = AmeySponsor.split("\n")
         soundSponsor = soundSponsor.read()

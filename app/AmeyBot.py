@@ -27,7 +27,7 @@ import json
 from googleapiclient.discovery import build
 from google_auth_oauthlib.flow import InstalledAppFlow
 #Main Program Starts From Here
-botLog.basicConfig(filename="AmeyaBot.log", level=botLog.INFO, format="%(asctime)s - %(levelname)s - %(message)s")
+botLog.basicConfig(filename="log/AmeyaBot.log", level=botLog.INFO, format="%(asctime)s - %(levelname)s - %(message)s")
 try:
     def printNor(text):
         botLog.info(text)
@@ -65,7 +65,7 @@ try:
             return True
     def ameyMainJsonFetch():
         global welcomeFont, BOT_SOUND, API_SERVICE_NAME, API_VERSION, API_SCOPES, API_KEYS, CLIENT_FILES, ameyBotEmojiMain, ameyBotEmojiReplace
-        API_CONFIG_FILE = urlopen("https://github.com/AmeyaGurjar/AmeyBotAssets/raw/main/JSON/internalAmeyBotSetting.json")
+        API_CONFIG_FILE = urlopen("https://gitlab.com/AmeyaGurjar/ameybotassets/-/raw/main/config/internalAmeyBotSetting.json")
         API_CONFIG = json.load(API_CONFIG_FILE)
         # BOT STYLE
         welcomeFont = API_CONFIG["AmeyBotStyle"]["welcomeFont"]
@@ -542,7 +542,7 @@ try:
     def configValidate():
         global botName, botUrl, autoReplyChatBot, wordLimit, sayDelay, liveChats, timedAuthors, readingBot, welcomeBotUser, welcomeMusic, funnyBotSounds, jokes, timeOutTimeNormal, timeOutTimeMod
         configRun()
-        ameyBotConfigFile = open("AmeyBotConfig.json", "r")
+        ameyBotConfigFile = open("config/AmeyBotConfig.json", "r")
         ameyBotConfig = json.load(ameyBotConfigFile)
         botName = ameyBotConfig["AmeyBotConfig"]["botName"]
         botUrl = ameyBotConfig["AmeyBotConfig"]["botUrl"]

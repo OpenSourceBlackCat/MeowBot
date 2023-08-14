@@ -7,10 +7,10 @@ def printGood(text):
     print(Fore.GREEN, text, Fore.RESET)
 def printError(text):
     print(Fore.RED, text, Fore.RESET)
-AmeyBotConfigUrl = "https://github.com/AmeyaGurjar/AmeyBotAssets/raw/main/JSON/AmeyBotConfig.json"
+AmeyBotConfigUrl = "https://gitlab.com/AmeyaGurjar/ameybotassets/-/raw/main/AmeyBotConfig.json"
 def jsonFetch():
     global configBotFunction, optionBotConfig, inputBotString
-    internalAmeyBotConfigFile = urlopen("https://raw.githubusercontent.com/AmeyaGurjar/AmeyBotAssets/main/JSON/internalAmeyBotSetting.json")
+    internalAmeyBotConfigFile = urlopen("https://gitlab.com/AmeyaGurjar/ameybotassets/-/raw/main/config/internalAmeyBotSetting.json")
     internalAmeyBotConfig = load(internalAmeyBotConfigFile)
     configBotFunction = internalAmeyBotConfig["AmeyConfigFile"]["configFunction"]
     optionBotConfig = internalAmeyBotConfig["AmeyConfigFile"]["optionConfig"]
@@ -49,7 +49,7 @@ def configValidator(ameyBotConfig, configFunction ,optionConfig, inputString):
             else:
                 printError("Invalid Option Entered!")
                 configValidator(ameyBotConfig=ameyBotConfig, configFunction=configFunction, optionConfig=optionConfig, inputString=inputString)
-    ameyBotConfigFile = open("AmeyBotConfig.json", "w")
+    ameyBotConfigFile = open("config/AmeyBotConfig.json", "w")
     dump(ameyBotConfig, ameyBotConfigFile)
         
 def configCheck(ameyBotConfig):
@@ -59,15 +59,15 @@ def configCheck(ameyBotConfig):
     
 def configRun():
     if exists("AmeyBotConfig.json"):
-        ameyBotConfigFile = open("AmeyBotConfig.json", "r")
+        ameyBotConfigFile = open("config/AmeyBotConfig.json", "r")
         try:
             ameyBotConfig = load(ameyBotConfigFile)
             configCheck(ameyBotConfig=ameyBotConfig)
         except:
             AmeyBotConfigDefault = get(AmeyBotConfigUrl, allow_redirects=True)
-            open("AmeyBotConfig.json", "wb").write(AmeyBotConfigDefault.content)
+            open("config/AmeyBotConfig.json", "wb").write(AmeyBotConfigDefault.content)
             configRun()
     else:
         AmeyBotConfigDefault = get(AmeyBotConfigUrl, allow_redirects=True)
-        open("AmeyBotConfig.json", "wb").write(AmeyBotConfigDefault.content)
+        open("config/AmeyBotConfig.json", "wb").write(AmeyBotConfigDefault.content)
         configRun()
