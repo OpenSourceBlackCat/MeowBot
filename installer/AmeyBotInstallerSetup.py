@@ -80,7 +80,7 @@ def mainDownload():
         try:
             installLabel.destroy()
         except: pass
-        shortCut(name="AmeyaBot.lnk", fileName="__init__.py", dataDir=dataDir, desktopShortcut=True)
+        shortCut(name="AmeyaBot.lnk", fileName="main.py", dataDir=dataDir, desktopShortcut=True)
         shortCut(name="AmeyaBotUpdater.lnk", fileName="AmeyBotUpdater.py", dataDir=dataDir, desktopShortcut=True)
         shortCut(name="AmeyaBotUninstaller.lnk", fileName="AmeyBotUninstaller.py", dataDir=dataDir)
         downloadDone = Label(root, text="AMEY BOT Installed Successfully.", background='green', foreground='white').pack()
