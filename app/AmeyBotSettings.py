@@ -2,7 +2,6 @@ from os.path import exists
 from colorama import Fore
 from json import load, dump
 from urllib.request import urlopen
-from requests import get
 def printGood(text):
     print(Fore.GREEN, text, Fore.RESET)
 def printError(text):
@@ -64,10 +63,10 @@ def configRun():
             ameyBotConfig = load(ameyBotConfigFile)
             configCheck(ameyBotConfig=ameyBotConfig)
         except:
-            AmeyBotConfigDefault = get(AmeyBotConfigUrl, allow_redirects=True)
-            open("config/AmeyBotConfig.json", "wb").write(AmeyBotConfigDefault.content)
+            AmeyBotConfigDefault = urlopen(AmeyBotConfigUrl)
+            open("config/AmeyBotConfig.json", "wb").write(AmeyBotConfigDefault)
             configRun()
     else:
-        AmeyBotConfigDefault = get(AmeyBotConfigUrl, allow_redirects=True)
-        open("config/AmeyBotConfig.json", "wb").write(AmeyBotConfigDefault.content)
+        AmeyBotConfigDefault = urlopen(AmeyBotConfigUrl)
+        open("config/AmeyBotConfig.json", "wb").write(AmeyBotConfigDefault)
         configRun()
