@@ -1,4 +1,3 @@
-
 # Some Important Python Modules For Runing This Bot.
 from gtts import gTTS
 import pytchat
@@ -6,13 +5,13 @@ from threading import Thread
 from colorama import Fore
 import logging as botLog
 from pyfiglet import figlet_format
-from AmeySounds import funnySounds
-from AmeyBotSettings import configRun
-from AmeyChannellog import version
-from AmeyEmoji import emojiCheck
-from AmeyAutoReplyChatBot import mainChatBot
-import AmeySounds
-from AmeySponsors import sponsorFileCheck
+from MeowSounds import funnySounds
+from MeowBotSettings import configRun
+from MeowChannellog import version
+from MeowEmoji import emojiCheck
+from MeowAutoReplyChatBot import mainChatBot
+import MeowSounds
+from MeowSponsors import sponsorFileCheck
 import webbrowser
 from urllib.request import urlopen
 import os
@@ -27,7 +26,7 @@ import json
 from googleapiclient.discovery import build
 from google_auth_oauthlib.flow import InstalledAppFlow
 #Main Program Starts From Here
-botLog.basicConfig(filename="log/AmeyaBot.log", level=botLog.INFO, format="%(asctime)s - %(levelname)s - %(message)s")
+botLog.basicConfig(filename="log/MeowaBot.log", level=botLog.INFO, format="%(asctime)s - %(levelname)s - %(message)s")
 try:
     def printNor(text):
         botLog.info(text)
@@ -63,30 +62,30 @@ try:
                 return False
         else:
             return True
-    def ameyMainJsonFetch():
-        global welcomeFont, BOT_SOUND, API_SERVICE_NAME, API_VERSION, API_SCOPES, API_KEYS, CLIENT_FILES, ameyBotEmojiMain, ameyBotEmojiReplace
-        API_CONFIG_FILE = urlopen("https://gitlab.com/AmeyaGurjar/ameybotassets/-/raw/main/config/internalAmeyBotSetting.json")
+    def MeowMainJsonFetch():
+        global welcomeFont, BOT_SOUND, API_SERVICE_NAME, API_VERSION, API_SCOPES, API_KEYS, CLIENT_FILES, MeowBotEmojiMain, MeowBotEmojiReplace
+        API_CONFIG_FILE = urlopen("https://gitlab.com/OpenSourceBlackCat/meowbotassets/-/raw/main/config/internalMeowBotSetting.json")
         API_CONFIG = json.load(API_CONFIG_FILE)
         # BOT STYLE
-        welcomeFont = API_CONFIG["AmeyBotStyle"]["welcomeFont"]
+        welcomeFont = API_CONFIG["MeowBotStyle"]["welcomeFont"]
         # BOT SOUND
-        BOT_SOUND = API_CONFIG["AmeySounds"]["botMainSound"]
-        # AMEY EMOJI
-        ameyBotEmojiMain = API_CONFIG["AmeyEmoji"]["emojiMain"]
-        ameyBotEmojiReplace = API_CONFIG["AmeyEmoji"]["emojiReplace"]
+        BOT_SOUND = API_CONFIG["MeowSounds"]["botMainSound"]
+        # Meow EMOJI
+        meowBotEmojiMain = API_CONFIG["MeowEmoji"]["emojiMain"]
+        meowBotEmojiReplace = API_CONFIG["MeowEmoji"]["emojiReplace"]
         # API SERVICE
-        API_SERVICE_NAME = API_CONFIG["AMEYBOTAPI"]["API_SERVICE_NAME"]
-        API_VERSION = API_CONFIG["AMEYBOTAPI"]["API_VERSION"]
-        API_SCOPES = API_CONFIG["AMEYBOTAPI"]["API_SCOPES"]
+        API_SERVICE_NAME = API_CONFIG["MEOWBOTAPI"]["API_SERVICE_NAME"]
+        API_VERSION = API_CONFIG["MEOWBOTAPI"]["API_VERSION"]
+        API_SCOPES = API_CONFIG["MEOWBOTAPI"]["API_SCOPES"]
         # API KEYS
-        API_KEYS = API_CONFIG["AMEYBOTAPI"]["botApiKeys"]
+        API_KEYS = API_CONFIG["MEOWBOTAPI"]["botApiKeys"]
         # CLIENT FILES
-        CLIENT_FILES = API_CONFIG["AMEYBOTAPI"]["botClientJsonFiles"]
+        CLIENT_FILES = API_CONFIG["MEOWBOTAPI"]["botClientJsonFiles"]
         return None
         
     # def botAuthenticator():
     #     global authenticator
-    #     authenticator = "https://github.com/AmeyaGurjar/AmeyBotAssets/raw/main/JSON/authBot.json"
+    #     authenticator = "https://github.com/OpenSourceBlackCat/MeowBotAssets/raw/main/JSON/authBot.json"
     #     def authBot():
     #         key = open("key.txt", "r")
     #         keyText = key.readline()
@@ -202,14 +201,14 @@ try:
 
     def wordCountCheck():
         try:
-            ameyreplace = c.message.split(" ")
-            for i in range(0, len(ameyreplace)):
+            meowreplace = c.message.split(" ")
+            for i in range(0, len(meowreplace)):
                 wordcount = 1
-                for j in range(i + 1, len(ameyreplace)):
-                    if (ameyreplace[i] == (ameyreplace[j])):
-                        if ameyreplace[j] not in ameyBotEmojiMain and ameyreplace[j] not in ameyBotEmojiReplace:
+                for j in range(i + 1, len(meowreplace)):
+                    if (meowreplace[i] == (meowreplace[j])):
+                        if meowreplace[j] not in meowBotEmojiMain and meowreplace[j] not in meowBotEmojiReplace:
                             wordcount = wordcount + 1
-                            ameyreplace[j] = "0"
+                            meowreplace[j] = "0"
                         else:
                             pass
                 if wordcount > int(wordLimit):
@@ -381,8 +380,8 @@ try:
             if (c.author.isChatSponsor == True) or (c.author.isChatOwner == True):
                 sponsorsBye = random.choice(sponsorBye)
                 insert_comment(messagetext=f"{c.author.name}, {sponsorsBye}")
-                AmeySounds.jsonFetch()
-                playsound(AmeySounds.soundBye)
+                MeowSounds.jsonFetch()
+                playsound(MeowSounds.soundBye)
                 sponsorVoice(f"{c.author.name}, {sponsorsBye}")
             else: 
                 sponsorsBye = random.choice(sponsorBye)
@@ -399,11 +398,11 @@ try:
             weather(c.message)
         elif "!ask" in c.message: 
             try: 
-                ameywiki()
+                meowwiki()
             except: 
-                printError("Error In AmeyWiki")
-    def ameywiki():
-        def ameywikilang():
+                printError("Error In MeowWiki")
+    def meowwiki():
+        def meowwikilang():
             if '-en' in c.message:
                 c.message = c.message.replace('-en', '')
                 wikipedia.set_lang('en')
@@ -417,15 +416,15 @@ try:
                 wikipedia.set_lang('en')
         try:
             if '!askser' in c.message:
-                ameywikilang()
+                meowwikilang()
                 c.message = c.message.replace('!askser', '')
-                amey = wikipedia.search(c.message, results=5)
-                insert_comment(messagetext=f"{c.author.name} {amey}")
+                meow = wikipedia.search(c.message, results=5)
+                insert_comment(messagetext=f"{c.author.name} {meow}")
             elif '!asksum' in c.message:
-                ameywikilang()
+                meowwikilang()
                 c.message = c.message.replace('!asksum', '')
-                amey = wikipedia.summary(c.message, sentences=1)
-                insert_comment(messagetext=f"{c.author.name} {str(amey)}")
+                meow = wikipedia.summary(c.message, sentences=1)
+                insert_comment(messagetext=f"{c.author.name} {str(meow)}")
         except:
             printError('Some Error In Wikipedia')
             pass
@@ -542,26 +541,26 @@ try:
     def configValidate():
         global botName, botUrl, autoReplyChatBot, wordLimit, sayDelay, liveChats, timedAuthors, readingBot, welcomeBotUser, welcomeMusic, funnyBotSounds, jokes, timeOutTimeNormal, timeOutTimeMod
         configRun()
-        ameyBotConfigFile = open("config/AmeyBotConfig.json", "r")
-        ameyBotConfig = json.load(ameyBotConfigFile)
-        botName = ameyBotConfig["AmeyBotConfig"]["botName"]
-        botUrl = ameyBotConfig["AmeyBotConfig"]["botUrl"]
-        readingBot = ameyBotConfig["AmeyBotConfig"]["readingBot"]
-        autoReplyChatBot = ameyBotConfig["AmeyBotConfig"]["autoReplyChatBot"]
-        welcomeBotUser = ameyBotConfig["AmeyBotConfig"]["welcomeUser"]
-        welcomeMusic = ameyBotConfig["AmeyBotConfig"]["welcomeMusic"]
-        funnyBotSounds = ameyBotConfig["AmeyBotConfig"]["funnySounds"]
-        jokes = ameyBotConfig["AmeyBotConfig"]["jokes"]
-        wordLimit = ameyBotConfig["AmeyBotConfig"]["wordLimit"]
-        sayDelay = ameyBotConfig["AmeyBotConfig"]["sayDelay"]
+        meowBotConfigFile = open("config/MeowBotConfig.json", "r")
+        meowBotConfig = json.load(meowBotConfigFile)
+        botName = meowBotConfig["MeowBotConfig"]["botName"]
+        botUrl = meowBotConfig["MeowBotConfig"]["botUrl"]
+        readingBot = meowBotConfig["MeowBotConfig"]["readingBot"]
+        autoReplyChatBot = meowBotConfig["MeowBotConfig"]["autoReplyChatBot"]
+        welcomeBotUser = meowBotConfig["MeowBotConfig"]["welcomeUser"]
+        welcomeMusic = meowBotConfig["MeowBotConfig"]["welcomeMusic"]
+        funnyBotSounds = meowBotConfig["MeowBotConfig"]["funnySounds"]
+        jokes = meowBotConfig["MeowBotConfig"]["jokes"]
+        wordLimit = meowBotConfig["MeowBotConfig"]["wordLimit"]
+        sayDelay = meowBotConfig["MeowBotConfig"]["sayDelay"]
         liveChats = {}
         timedAuthors = []
-        timeOutTimeNormal = ameyBotConfig["AmeyBotConfig"]["timeOutTimeNormal"]
-        timeOutTimeMod = ameyBotConfig["AmeyBotConfig"]["timeOutTimeMod"]
+        timeOutTimeNormal = meowBotConfig["MeowBotConfig"]["timeOutTimeNormal"]
+        timeOutTimeMod = meowBotConfig["MeowBotConfig"]["timeOutTimeMod"]
         chatBot()
     def mainGui():
-        ameyMainJsonFetch()
-        printNor(figlet_format("AMEY BOT", font=welcomeFont))
+        meowMainJsonFetch()
+        printNor(figlet_format("Meow BOT", font=welcomeFont))
         printNor(version)
         configValidate()                                       
 except Exception as e:
