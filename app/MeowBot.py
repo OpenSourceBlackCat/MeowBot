@@ -26,7 +26,7 @@ import json
 from googleapiclient.discovery import build
 from google_auth_oauthlib.flow import InstalledAppFlow
 #Main Program Starts From Here
-botLog.basicConfig(filename="log/MeowaBot.log", level=botLog.INFO, format="%(asctime)s - %(levelname)s - %(message)s")
+botLog.basicConfig(filename="log/MeowBot.log", level=botLog.INFO, format="%(asctime)s - %(levelname)s - %(message)s")
 try:
     def printNor(text):
         botLog.info(text)
@@ -560,7 +560,7 @@ try:
         chatBot()
     def mainGui():
         meowMainJsonFetch()
-        printNor(figlet_format("Meow BOT", font=welcomeFont))
+        printNor(figlet_format("MEOW BOT", font=welcomeFont))
         printNor(version)
         configValidate()                                       
 except Exception as e:
