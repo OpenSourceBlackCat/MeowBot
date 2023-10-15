@@ -15,7 +15,7 @@ def fileLoader():
     try:
         noUpdateLabel.destroy()
     except: pass
-    internalMeowBotConfigFile = urlopen("https://gitlab.com/OpenSourceBlackCat/meowbotassets/-/raw/main/config/internalMeowBotSetting.json")
+    internalMeowBotConfigFile = urlopen("https://gitlab.com/OpenSourceBlackCat/MeowBotAssets/-/raw/main/config/internalMeowBotSetting.json")
     internalMeowBotConfig = load(internalMeowBotConfigFile)
     botFiles = internalMeowBotConfig["MeowBotUpdaterFiles"]["botFiles"]
     botUrls = []
