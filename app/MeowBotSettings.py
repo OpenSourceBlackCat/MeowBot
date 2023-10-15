@@ -63,10 +63,10 @@ def configRun():
             meowBotConfig = load(meowBotConfigFile)
             configCheck(meowBotConfig=meowBotConfig)
         except:
-            MeowBotConfigDefault = urlopen(MeowBotConfigUrl)
-            open("config/MeowBotConfig.json", "wb").write(MeowBotConfigDefault)
+            MeowBotConfigDefault = load(urlopen(MeowBotConfigUrl))
+            open("config/MeowBotConfig.json", "wb").write(str(MeowBotConfigDefault))
             configRun()
     else:
-        MeowBotConfigDefault = urlopen(MeowBotConfigUrl)
-        open("config/MeowBotConfig.json", "wb").write(MeowBotConfigDefault)
+        MeowBotConfigDefault = load(urlopen(MeowBotConfigUrl))
+        open("config/MeowBotConfig.json", "wb").write(str(MeowBotConfigDefault))
         configRun()
