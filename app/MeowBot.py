@@ -559,7 +559,7 @@ try:
         timeOutTimeMod = meowBotConfig["MeowBotConfig"]["timeOutTimeMod"]
         chatBot()
     def mainGui():
-        meowMainJsonFetch()
+        MeowMainJsonFetch()
         printNor(figlet_format("MEOW BOT", font=welcomeFont))
         printNor(version)
         configValidate()                                       
