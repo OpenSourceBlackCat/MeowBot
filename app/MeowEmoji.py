@@ -9,11 +9,11 @@ def printError(text):
     print(Fore.RED, text, Fore.RESET)
 def configValidate():
     global timeOutTimeNormal, timeOutTimeMod
-    ameyBotConfigFile = open("config/AmeyBotConfig.json", "r")
-    ameyBotConfig = json.load(ameyBotConfigFile)
-    emojiLimit = ameyBotConfig["AmeyBotConfig"]["emojiLimit"]
-    timeOutTimeNormal = ameyBotConfig["AmeyBotConfig"]["timeOutTimeNormal"]
-    timeOutTimeMod = ameyBotConfig["AmeyBotConfig"]["timeOutTimeMod"]
+    meowBotConfigFile = open("config/MeowBotConfig.json", "r")
+    meowBotConfig = json.load(meowBotConfigFile)
+    emojiLimit = meowBotConfig["MeowBotConfig"]["emojiLimit"]
+    timeOutTimeNormal = meowBotConfig["MeowBotConfig"]["timeOutTimeNormal"]
+    timeOutTimeMod = meowBotConfig["MeowBotConfig"]["timeOutTimeMod"]
     return int(emojiLimit)
 def emojiCheck(timeInMin, chatMod, insert_comment, Author, chatMessage):
         try:

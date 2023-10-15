@@ -7,15 +7,15 @@ def printError(text):
     print(Fore.RED, text, Fore.RESET)
 def jsonFetch():
     global soundBye, funnyBotSounds, funnyBotSoundsRaw ,fartBotSounds
-    internalAmeyBotConfigFile = urlopen("https://gitlab.com/AmeyaGurjar/ameybotassets/-/raw/main/config/internalAmeyBotSetting.json")
-    internalAmeyBotConfig = load(internalAmeyBotConfigFile)
-    soundBye = internalAmeyBotConfig["AmeySounds"]["soundBye"]
-    funnyBotSounds = internalAmeyBotConfig["AmeySounds"]["funnySounds"]
+    internalMeowBotConfigFile = urlopen("https://gitlab.com/OpenSourceBlackCat/meowbotassets/-/raw/main/config/internalMeowBotSetting.json")
+    internalMeowBotConfig = load(internalMeowBotConfigFile)
+    soundBye = internalMeowBotConfig["MeowSounds"]["soundBye"]
+    funnyBotSounds = internalMeowBotConfig["MeowSounds"]["funnySounds"]
     funnyBotSoundsRaw = []
     fartBotSounds = []
-    for i in internalAmeyBotConfig["AmeySounds"]["fartSounds"]:
-        fartBotSounds.append(internalAmeyBotConfig["AmeySounds"]["fartSounds"][i])
-    for i in internalAmeyBotConfig["AmeySounds"]["funnySounds"]:
+    for i in internalMeowBotConfig["MeowSounds"]["fartSounds"]:
+        fartBotSounds.append(internalMeowBotConfig["MeowSounds"]["fartSounds"][i])
+    for i in internalMeowBotConfig["MeowSounds"]["funnySounds"]:
         funnyBotSoundsRaw.append(i)
     return None
 def funnySounds(sponsorVoice, authorName, chatMessage):

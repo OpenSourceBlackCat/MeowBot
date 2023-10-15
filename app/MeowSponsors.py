@@ -7,36 +7,36 @@ from requests import get
 def printError(text):
     print(Fore.RED, text, Fore.RESET)
 def jsonFetch():
-    global internalAmeyBotConfig, sponsorBotSound
-    internalAmeyBotConfigFile = urlopen("https://gitlab.com/AmeyaGurjar/ameybotassets/-/raw/main/config/internalAmeyBotSetting.json")
-    internalAmeyBotConfig = load(internalAmeyBotConfigFile)
-    sponsorBotSound = internalAmeyBotConfig["AmeySounds"]["sponsorSound"]
+    global internalMeowBotConfig, sponsorBotSound
+    internalMeowBotConfigFile = urlopen("https://gitlab.com/OpenSourceBlackCat/meowbotassets/-/raw/main/config/internalMeowBotSetting.json")
+    internalMeowBotConfig = load(internalMeowBotConfigFile)
+    sponsorBotSound = internalMeowBotConfig["MeowSounds"]["sponsorSound"]
 def sponsorFileCheck(channelId):
     jsonFetch()
-    if exists("ini/AmeySponsor.ini") and exists("ini/sponsorSound.ini"):
+    if exists("ini/MeowSponsor.ini") and exists("ini/sponsorSound.ini"):
         sponsorCheck(channelId)
     else:
-        ameySponsorFile = internalAmeyBotConfig["AmeySponsor"]["AmeySponsorTxt"]
-        sponsorSoundFile = internalAmeyBotConfig["AmeySponsor"]["sponsorSoundFile"]
-        get(ameySponsorFile)
+        meowSponsorFile = internalMeowBotConfig["MeowSponsor"]["MeowSponsorTxt"]
+        sponsorSoundFile = internalMeowBotConfig["MeowSponsor"]["sponsorSoundFile"]
+        get(meowSponsorFile)
         get(sponsorSoundFile)
-        ameySponsorFile = get(ameySponsorFile, allow_redirects=True)
-        open("ini/AmeySponsor.ini", "wb").write(ameySponsorFile.content)
+        meowSponsorFile = get(meowSponsorFile, allow_redirects=True)
+        open("ini/MeowSponsor.ini", "wb").write(meowSponsorFile.content)
         sponsorSoundFile = get(sponsorSoundFile, allow_redirects=True)
         open("ini/sponsorSound.ini", "wb").write(sponsorSoundFile.content)
         sponsorFileCheck()
         
 def sponsorCheck(channelId):
     try:
-        AmeySponsor = open("ini/AmeySponsor.ini", "r")
+        MeowSponsor = open("ini/MeowSponsor.ini", "r")
         soundSponsor = open("ini/sponsorSound.ini", "r")
-        AmeySponsor = AmeySponsor.read()
-        AmeySponsor = AmeySponsor.split("\n")
+        MeowSponsor = MeowSponsor.read()
+        MeowSponsor = MeowSponsor.split("\n")
         soundSponsor = soundSponsor.read()
         soundSponsor = soundSponsor.split("\n")
-        if channelId in AmeySponsor:
-            for i in range(len(AmeySponsor)):
-                if channelId == AmeySponsor[i]:
+        if channelId in MeowSponsor:
+            for i in range(len(MeowSponsor)):
+                if channelId == MeowSponsor[i]:
                     try:
                         playsound(soundSponsor[i], False)
                     except Exception as e:

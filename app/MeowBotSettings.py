@@ -6,67 +6,67 @@ def printGood(text):
     print(Fore.GREEN, text, Fore.RESET)
 def printError(text):
     print(Fore.RED, text, Fore.RESET)
-AmeyBotConfigUrl = "https://gitlab.com/AmeyaGurjar/ameybotassets/-/raw/main/AmeyBotConfig.json"
+MeowBotConfigUrl = "https://gitlab.com/OpenSourceBlackCat/meowbotassets/-/raw/main/MeowBotConfig.json"
 def jsonFetch():
     global configBotFunction, optionBotConfig, inputBotString
-    internalAmeyBotConfigFile = urlopen("https://gitlab.com/AmeyaGurjar/ameybotassets/-/raw/main/config/internalAmeyBotSetting.json")
-    internalAmeyBotConfig = load(internalAmeyBotConfigFile)
-    configBotFunction = internalAmeyBotConfig["AmeyConfigFile"]["configFunction"]
-    optionBotConfig = internalAmeyBotConfig["AmeyConfigFile"]["optionConfig"]
-    inputBotString = internalAmeyBotConfig["AmeyConfigFile"]["inputString"]
-def configValidator(ameyBotConfig, configFunction ,optionConfig, inputString):
+    internalMeowBotConfigFile = urlopen("https://gitlab.com/OpenSourceBlackCat/meowbotassets/-/raw/main/config/internalMeowBotSetting.json")
+    internalMeowBotConfig = load(internalMeowBotConfigFile)
+    configBotFunction = internalMeowBotConfig["MeowConfigFile"]["configFunction"]
+    optionBotConfig = internalMeowBotConfig["MeowConfigFile"]["optionConfig"]
+    inputBotString = internalMeowBotConfig["MeowConfigFile"]["inputString"]
+def configValidator(meowBotConfig, configFunction ,optionConfig, inputString):
     if configFunction == "botName" or configFunction == "botUrl":
-        if ameyBotConfig["AmeyBotConfig"][configFunction] == "":
+        if meowBotConfig["MeowBotConfig"][configFunction] == "":
             print("\n")
             readingBot = str(input(Fore.BLUE+inputString+Fore.RESET)).lower()
             if configFunction == "botUrl": 
                 readingBot = readingBot.replace("https://www.youtube.com/channel/", "")
-            ameyBotConfig["AmeyBotConfig"][configFunction] = ameyBotConfig["AmeyBotConfig"][configFunction].replace(ameyBotConfig["AmeyBotConfig"][configFunction], str(readingBot))
+            meowBotConfig["MeowBotConfig"][configFunction] = meowBotConfig["MeowBotConfig"][configFunction].replace(meowBotConfig["MeowBotConfig"][configFunction], str(readingBot))
             printGood("Settings Saved Successfully")
         else:
             pass
     elif configFunction == "emojiLimit" or configFunction == "wordLimit" or configFunction == "sayDelay" or configFunction == "timeOutTimeNormal" or configFunction == "timeOutTimeMod":
-        if ameyBotConfig["AmeyBotConfig"][configFunction] == "":
+        if meowBotConfig["MeowBotConfig"][configFunction] == "":
             print("\n")
             try:
                 readingBot = int(input(Fore.BLUE+inputString+Fore.RESET))
-                ameyBotConfig["AmeyBotConfig"][configFunction] = ameyBotConfig["AmeyBotConfig"][configFunction].replace(ameyBotConfig["AmeyBotConfig"][configFunction], str(readingBot))
+                meowBotConfig["MeowBotConfig"][configFunction] = meowBotConfig["MeowBotConfig"][configFunction].replace(meowBotConfig["MeowBotConfig"][configFunction], str(readingBot))
                 printGood("Settings Saved Successfully")
             except: 
                 printError("Invalid Option Entered!")
-                configValidator(ameyBotConfig=ameyBotConfig, configFunction=configFunction, optionConfig=optionConfig, inputString=inputString)
+                configValidator(meowBotConfig=meowBotConfig, configFunction=configFunction, optionConfig=optionConfig, inputString=inputString)
         else:
             pass
     else:
         optionConfigList = optionConfig.split(", ")
-        if ameyBotConfig["AmeyBotConfig"][configFunction] not in optionConfigList:
+        if meowBotConfig["MeowBotConfig"][configFunction] not in optionConfigList:
             print("\n")
             readingBot = str(input(Fore.BLUE+inputString+Fore.RESET)).lower()
             if readingBot in optionConfigList:
-                ameyBotConfig["AmeyBotConfig"][configFunction] = ameyBotConfig["AmeyBotConfig"][configFunction].replace(ameyBotConfig["AmeyBotConfig"][configFunction], str(readingBot))
+                meowBotConfig["MeowBotConfig"][configFunction] = meowBotConfig["MeowBotConfig"][configFunction].replace(meowBotConfig["MeowBotConfig"][configFunction], str(readingBot))
                 printGood("Settings Saved Successfully")
             else:
                 printError("Invalid Option Entered!")
-                configValidator(ameyBotConfig=ameyBotConfig, configFunction=configFunction, optionConfig=optionConfig, inputString=inputString)
-    ameyBotConfigFile = open("config/AmeyBotConfig.json", "w")
-    dump(ameyBotConfig, ameyBotConfigFile)
+                configValidator(meowBotConfig=meowBotConfig, configFunction=configFunction, optionConfig=optionConfig, inputString=inputString)
+    meowBotConfigFile = open("config/MeowBotConfig.json", "w")
+    dump(meowBotConfig, meowBotConfigFile)
         
-def configCheck(ameyBotConfig):
+def configCheck(meowBotConfig):
     jsonFetch()
     for i in range(len(configBotFunction)):
-        configValidator(ameyBotConfig=ameyBotConfig, configFunction=configBotFunction[i], optionConfig=optionBotConfig[i], inputString=inputBotString[i])
+        configValidator(meowBotConfig=meowBotConfig, configFunction=configBotFunction[i], optionConfig=optionBotConfig[i], inputString=inputBotString[i])
     
 def configRun():
-    if exists("AmeyBotConfig.json"):
-        ameyBotConfigFile = open("config/AmeyBotConfig.json", "r")
+    if exists("MeowBotConfig.json"):
+        meowBotConfigFile = open("config/MeowBotConfig.json", "r")
         try:
-            ameyBotConfig = load(ameyBotConfigFile)
-            configCheck(ameyBotConfig=ameyBotConfig)
+            meowBotConfig = load(meowBotConfigFile)
+            configCheck(meowBotConfig=meowBotConfig)
         except:
-            AmeyBotConfigDefault = urlopen(AmeyBotConfigUrl)
-            open("config/AmeyBotConfig.json", "wb").write(AmeyBotConfigDefault)
+            MeowBotConfigDefault = urlopen(MeowBotConfigUrl)
+            open("config/MeowBotConfig.json", "wb").write(MeowBotConfigDefault)
             configRun()
     else:
-        AmeyBotConfigDefault = urlopen(AmeyBotConfigUrl)
-        open("config/AmeyBotConfig.json", "wb").write(AmeyBotConfigDefault)
+        MeowBotConfigDefault = urlopen(MeowBotConfigUrl)
+        open("config/MeowBotConfig.json", "wb").write(MeowBotConfigDefault)
         configRun()

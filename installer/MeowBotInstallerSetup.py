@@ -27,22 +27,22 @@ def fileLoader():
         try:
             updateLabel.destroy()
         except: pass
-    internalAmeyBotConfigFile = urlopen("https://github.com/AmeyaGurjar/AmeyBotAssets/raw/main/JSON/internalAmeyBotSetting.json")
-    internalAmeyBotConfig = load(internalAmeyBotConfigFile)
-    botFiles = internalAmeyBotConfig["AmeyBotUpdaterFiles"]["botFiles"]
+    internalMeowBotConfigFile = urlopen("https://github.com/OpenSourceBlackCat/MeowBotAssets/raw/main/JSON/internalMeowBotSetting.json")
+    internalMeowBotConfig = load(internalMeowBotConfigFile)
+    botFiles = internalMeowBotConfig["MeowBotUpdaterFiles"]["botFiles"]
     botUrls = []
-    for i in internalAmeyBotConfig["AmeyBotUpdaterFiles"]["botUrls"]:
-        botUrls.append(internalAmeyBotConfig["AmeyBotUpdaterFiles"]["botUrls"][i])
+    for i in internalMeowBotConfig["MeowBotUpdaterFiles"]["botUrls"]:
+        botUrls.append(internalMeowBotConfig["MeowBotUpdaterFiles"]["botUrls"][i])
     mainDownload()
 def botFileDownloader(botFileUrl, botFileName):
     global dataDir
     homeDir = os.path.expanduser('~')
     if sys.platform == "win32":
-        dataDir = os.path.join(homeDir, "AppData", "Local", "AmeyaBot")
+        dataDir = os.path.join(homeDir, "AppData", "Local", "MeowBot")
         if not os.path.exists(dataDir):
             os.mkdir(dataDir)
     else:
-        dataDir = os.sep.join(homeDir, "AmeyBot")
+        dataDir = os.sep.join(homeDir, "MeowBot")
         if not os.path.exists(dataDir):
             os.mkdir(dataDir)
     myBotFile = requests.get(botFileUrl, allow_redirects=True)
@@ -53,7 +53,7 @@ def shortCut(name, fileName, dataDir, desktopShortcut=False):
     desktop = winshell.desktop()
     dataDirMain = os.path.join(dataDir, fileName)
     mainPath = os.path.join(desktop, name)
-    startPath = os.path.join(os.path.expanduser("~"), "AppData", "Roaming", "Microsoft", "Windows", "Start Menu", "Programs", "AmeyBot")
+    startPath = os.path.join(os.path.expanduser("~"), "AppData", "Roaming", "Microsoft", "Windows", "Start Menu", "Programs", "MeowBot")
     if not os.path.exists(startPath):
         os.mkdir(startPath)
     shell = win32com.client.Dispatch("WScript.Shell")
@@ -61,12 +61,12 @@ def shortCut(name, fileName, dataDir, desktopShortcut=False):
         shortcut = shell.CreateShortCut(mainPath)
         shortcut.WorkingDirectory = f"{dataDir}"
         shortcut.Targetpath = f"{dataDirMain}"
-        shortcut.IconLocation = f"{os.path.join(dataDir, 'AmeyBotIcon.ico')}"
+        shortcut.IconLocation = f"{os.path.join(dataDir, 'MeowBotIcon.ico')}"
         shortcut.save()
     startShortcut = shell.CreateShortCut(os.path.join(startPath, name))
     startShortcut.WorkingDirectory = f"{dataDir}"
     startShortcut.Targetpath = f"{dataDirMain}"
-    startShortcut.IconLocation = f"{os.path.join(dataDir, 'AmeyBotIcon.ico')}"
+    startShortcut.IconLocation = f"{os.path.join(dataDir, 'MeowBotIcon.ico')}"
     startShortcut.save()
 def mainDownload():
     try:
@@ -80,28 +80,28 @@ def mainDownload():
         try:
             installLabel.destroy()
         except: pass
-        shortCut(name="AmeyaBot.lnk", fileName="main.py", dataDir=dataDir, desktopShortcut=True)
-        shortCut(name="AmeyaBotUpdater.lnk", fileName="AmeyBotUpdater.py", dataDir=dataDir, desktopShortcut=True)
-        shortCut(name="AmeyaBotUninstaller.lnk", fileName="AmeyBotUninstaller.py", dataDir=dataDir)
-        downloadDone = Label(root, text="AMEY BOT Installed Successfully.", background='green', foreground='white').pack()
+        shortCut(name="MeowBot.lnk", fileName="main.py", dataDir=dataDir, desktopShortcut=True)
+        shortCut(name="MeowBotUpdater.lnk", fileName="MeowBotUpdater.py", dataDir=dataDir, desktopShortcut=True)
+        shortCut(name="MeowBotUninstaller.lnk", fileName="MeowBotUninstaller.py", dataDir=dataDir)
+        downloadDone = Label(root, text="MEOW BOT Installed Successfully.", background='green', foreground='white').pack()
     except Exception as e:
         printError("Error!")
 def main():
     global root, updateEnter
     root = Tk()
-    root.title("AMEY BOT SETUP")
+    root.title("MEOW BOT SETUP")
     root.geometry("300x180")
     root.resizable(False, False)
     root.configure(bg='green')
     canvas = Canvas(root, width=300, height=100)
     canvas.pack()
-    ameyBotLogo = "https://github.com/AmeyaGurjar/AmeyBotAssets/raw/main/ameyBotUpdater.png"
-    image_byt = urlopen(ameyBotLogo).read()
+    meowBotLogo = "https://github.com/OpenSourceBlackCat/MeowBotAssets/raw/main/meowBotUpdater.png"
+    image_byt = urlopen(meowBotLogo).read()
     img_main = Image.open(BytesIO(image_byt))
     img_b = img_main.resize((300, 100))
     img = ImageTk.PhotoImage(img_b)
     canvas.create_image(0,0, anchor=NW, image=img)
-    mainLabel = Label(root, text="Amey Youtube Live Chat Bot", background='green', foreground='white').pack()
+    mainLabel = Label(root, text="Meow Youtube Live Chat Bot", background='green', foreground='white').pack()
     updateEnter = Button(root, text="Install", background='green', foreground='white', command=Thread(target=fileLoader).start)
     updateEnter.pack()
     root.mainloop()

@@ -11,20 +11,20 @@ def printGood(text):
 def printError(text):
     print(Fore.RED, text, Fore.RESET)
 def jsonFetch():
-    global internalAmeyBotConfig
-    internalAmeyBotConfigFile = urlopen("https://gitlab.com/AmeyaGurjar/ameybotassets/-/raw/main/config/internalAmeyBotSetting.json")
-    internalAmeyBotConfig = load(internalAmeyBotConfigFile)
+    global internalMeowBotConfig
+    internalMeowBotConfigFile = urlopen("https://gitlab.com/OpenSourceBlackCat/meowbotassets/-/raw/main/config/internalMeowBotSetting.json")
+    internalMeowBotConfig = load(internalMeowBotConfigFile)
 def addSponsor():
     global newSponsor
     jsonFetch()
-    if exists("ini/AmeySponsor.ini") and exists("ini/sponsorSound.ini"):
-        AmeySponsor = open("ini/AmeySponsor.ini", "r")
+    if exists("ini/MeowSponsor.ini") and exists("ini/sponsorSound.ini"):
+        MeowSponsor = open("ini/MeowSponsor.ini", "r")
         newSponsor = str(input(Fore.BLUE+"Enter Sponsor's Youtube Channel Link: "+Fore.RESET))
         if "https://www.youtube.com/channel/" in newSponsor or "https://www.youtube.com/c/" in newSponsor:
             newSponsor = newSponsor.replace("https://www.youtube.com/channel/", "")
             newSponsor = newSponsor.replace("https://www.youtube.com/c/", "")
-            AmeySponsorRead = AmeySponsor.read()
-            if newSponsor not in AmeySponsorRead:
+            MeowSponsorRead = MeowSponsor.read()
+            if newSponsor not in MeowSponsorRead:
                 addMusic()
             else:
                 printNor("The Sponsor Is Already In The List!")
@@ -33,12 +33,12 @@ def addSponsor():
             printError("Invalid Channel Url!")
             addSponsor()
     else:
-        ameySponsorFile = internalAmeyBotConfig["AmeySponsor"]["AmeySponsorTxt"]
-        sponsorSoundFile = internalAmeyBotConfig["AmeySponsor"]["sponsorSoundFile"]
-        get(ameySponsorFile)
+        meowSponsorFile = internalMeowBotConfig["MeowSponsor"]["MeowSponsorTxt"]
+        sponsorSoundFile = internalMeowBotConfig["MeowSponsor"]["sponsorSoundFile"]
+        get(meowSponsorFile)
         get(sponsorSoundFile)
-        ameySponsorFile = get(ameySponsorFile, allow_redirects=True)
-        open("ini/AmeySponsor.ini", "wb").write(ameySponsorFile.content)
+        meowSponsorFile = get(meowSponsorFile, allow_redirects=True)
+        open("ini/MeowSponsor.ini", "wb").write(meowSponsorFile.content)
         sponsorSoundFile = get(sponsorSoundFile, allow_redirects=True)
         open("ini/sponsorSound.ini", "wb").write(sponsorSoundFile.content)
         addSponsor()
@@ -47,9 +47,9 @@ def addMusic():
     newSound = newSound.replace('"', '')
     newSound = newSound.replace("'", "")
     if exists(newSound):
-        AmeySponsor = open("ini/AmeySponsor.ini", "a")
-        AmeySponsor.write(f"{newSponsor}\n")
-        AmeySponsor.close()
+        MeowSponsor = open("ini/MeowSponsor.ini", "a")
+        MeowSponsor.write(f"{newSponsor}\n")
+        MeowSponsor.close()
         sponsorSound = open("ini/sponsorSound.ini", "a")
         sponsorSound.write(f"{newSound}\n")
         sponsorSound.close()
