@@ -6,7 +6,7 @@ def printGood(text):
     print(Fore.GREEN, text, Fore.RESET)
 def printError(text):
     print(Fore.RED, text, Fore.RESET)
-MeowBotConfigUrl = "https://gitlab.com/OpenSourceBlackCat/meowbotassets/-/raw/main/MeowBotConfig.json"
+MeowBotConfigUrl = "https://gitlab.com/OpenSourceBlackCat/MeowBotAssets/-/raw/main/config/MeowBotConfig.json"
 def jsonFetch():
     global configBotFunction, optionBotConfig, inputBotString
     internalMeowBotConfigFile = urlopen("https://gitlab.com/OpenSourceBlackCat/meowbotassets/-/raw/main/config/internalMeowBotSetting.json")
