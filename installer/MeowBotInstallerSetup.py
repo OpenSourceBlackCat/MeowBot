@@ -95,7 +95,7 @@ def main():
     root.configure(bg='green')
     canvas = Canvas(root, width=300, height=100)
     canvas.pack()
-    meowBotLogo = "https://github.com/OpenSourceBlackCat/MeowBotAssets/raw/main/meowBotUpdater.png"
+    meowBotLogo = "https://gitlab.com/OpenSourceBlackCat/MeowBotAssets/raw/main/meowBotUpdater.png"
     image_byt = urlopen(meowBotLogo).read()
     img_main = Image.open(BytesIO(image_byt))
     img_b = img_main.resize((300, 100))
