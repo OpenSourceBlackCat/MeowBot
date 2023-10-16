@@ -54,6 +54,7 @@ def configValidator(meowBotConfig, configFunction ,optionConfig, inputString):
 def configCheck(meowBotConfig):
     jsonFetch()
     for i in range(len(configBotFunction)):
+	print(meowBotConfig, configBotFunction[i], optionBotConfig[i], inputString)
         configValidator(meowBotConfig=meowBotConfig, configFunction=configBotFunction[i], optionConfig=optionBotConfig[i], inputString=inputBotString[i])
     
 def configRun():
@@ -63,12 +64,12 @@ def configRun():
             meowBotConfig = load(meowBotConfigFile)
             configCheck(meowBotConfig=meowBotConfig)
         except:
-            MeowBotConfigDefault = urlopen(MeowBotConfigUrl)
+            MeowBotConfigDefault = load(urlopen(MeowBotConfigUrl))
             with open("config/MeowBotConfig.json", "w") as configDefault:
-                configDefault.write(str(load(MeowBotConfigDefault)))
-                configRun()
-    else:
-        MeowBotConfigDefault = urlopen(MeowBotConfigUrl)
-        with open("config/MeowBotConfig.json", "w") as configDefault:
-            configDefault.write(str(load(MeowBotConfigDefault)))
+                configDefault.write(str(MeowBotConfigDefault))
             configRun()
+    else:
+        MeowBotConfigDefault = load(urlopen(MeowBotConfigUrl))
+        with open("config/MeowBotConfig.json", "w") as configDefault:
+            configDefault.write(str(MeowBotConfigDefault))
+        configRun()
