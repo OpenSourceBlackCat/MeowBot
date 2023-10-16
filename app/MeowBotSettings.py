@@ -66,9 +66,9 @@ def configRun():
             MeowBotConfigDefault = urlopen(MeowBotConfigUrl)
             with open("config/MeowBotConfig.json", "w") as configDefault:
                 configDefault.write(str(load(MeowBotConfigDefault)))
-            configRun()
+                configRun()
     else:
         MeowBotConfigDefault = urlopen(MeowBotConfigUrl)
         with open("config/MeowBotConfig.json", "w") as configDefault:
             configDefault.write(str(load(MeowBotConfigDefault)))
-        configRun()
+            configRun()
