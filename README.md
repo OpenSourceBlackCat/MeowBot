@@ -124,4 +124,3 @@ Upon Finishing, You May Close The Updater And Enjoy The Latest MeowBot.<br><br>
 [<img src="https://gitlab.com/OpenSourceBlackCat/MeowBotAssets/raw/main/images/coffee.png" width=500rem height=80%>](https://www.buymeacoffee.com/amey992004)<br>
 [<img src="https://gitlab.com/OpenSourceBlackCat/MeowBotAssets/raw/main/images/kofi.png" width=500rem height=80%>](https://www.ko-fi.com/ameyagurjar)<br>
 [<img src="https://gitlab.com/OpenSourceBlackCat/MeowBotAssets/raw/main/images/paypal.png" width=500rem height=90%>](https://www.paypal.me/AmeyMeow)<br>
-Meow
