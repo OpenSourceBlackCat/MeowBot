@@ -490,6 +490,7 @@ try:
         global vidlink, apiInp
         vidlink = str(input(f"{Fore.BLUE}\nEnter Your Youtube Stream Link: {Fore.RESET}"))
         vidpat = r"https://[wm]+\.youtube\.com/live/([A-Z 0-9]*)|watch\?v=([A-Z 0-9]*)"
+        print(vidpat, research(vidpat, vidlink, IGNORECASE))
         vidlink = research(vidpat, vidlink, IGNORECASE).group(1)
         if vidlink != None:
             def apiInp():
