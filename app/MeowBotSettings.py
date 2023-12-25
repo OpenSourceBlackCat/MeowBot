@@ -75,4 +75,4 @@ def configRun():
         with open("config/MeowBotConfig.json", "w") as configDefault:
             configDefault.write(str(MeowBotConfigDefault).replace("'", '"'))
         configDefault.close()
-        configCheck()
+        configCheck(meowBotConfig=meowBotConfig)
