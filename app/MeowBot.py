@@ -139,7 +139,7 @@ try:
             )
             livechatid = livechatrequest.execute()
             print("\n")
-            print(livechatid["items"])
+            print(livechatid)
             livechatid = livechatid["items"][0]["liveStreamingDetails"]["activeLiveChatId"]
             botNameUpper = botName.upper()
             insert_comment(messagetext=f"{botNameUpper} BOT IS RUNNING SUCCESSFULLY.")
