@@ -441,7 +441,7 @@ try:
     def sponsorVoice(sponsorChat):
         sponsorVoice = gTTS(sponsorChat, lang='hi', tld='co.in', slow=False)
         sponsorVoice.save('sponsorVoice.mp3')
-        os.system("tools/mpg123.exe --realtime sponsorVoice.mp3")
+        os.system(f"{tools}/mpg123.exe --realtime sponsorVoice.mp3")
 
     def linkCheck():
         if ":" in c.message or "/" in c.message or "." in c.message:
