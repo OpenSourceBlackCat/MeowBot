@@ -2,6 +2,7 @@
 from gtts import gTTS
 import os, sys
 sys.path.append(os.path.dirname(os.path.dirname(os.path.realpath(__file__))))
+print(os.path.dirname(os.path.dirname(os.path.realpath(__file__))))
 import pytchat
 from threading import Thread
 from colorama import Fore
