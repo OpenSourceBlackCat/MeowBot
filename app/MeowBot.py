@@ -1,9 +1,7 @@
 # Some Important Python Modules For Runing This Bot.
 from gtts import gTTS
 import os, sys
-sys.path.append(os.path.dirname(os.path.dirname(os.path.realpath(__file__))))
-import tools
-print(sys.path(tools))
+mainPath = sys.path.append(os.path.dirname(os.path.dirname(os.path.realpath(__file__))))
 import pytchat
 from threading import Thread
 from colorama import Fore
@@ -441,7 +439,7 @@ try:
     def sponsorVoice(sponsorChat):
         sponsorVoice = gTTS(sponsorChat, lang='hi', tld='co.in', slow=False)
         sponsorVoice.save('sponsorVoice.mp3')
-        os.system(f"{tools}/mpg123.exe --realtime sponsorVoice.mp3")
+        os.system(f"{mainPath}/tools/mpg123.exe --realtime sponsorVoice.mp3")
 
     def linkCheck():
         if ":" in c.message or "/" in c.message or "." in c.message:
