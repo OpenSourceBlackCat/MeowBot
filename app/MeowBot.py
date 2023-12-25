@@ -64,7 +64,7 @@ try:
         else:
             return True
     def MeowMainJsonFetch():
-        global welcomeFont, BOT_SOUND, API_SERVICE_NAME, API_VERSION, API_SCOPES, API_KEYS, CLIENT_FILES, MeowBotEmojiMain, MeowBotEmojiReplace
+        global welcomeFont, BOT_SOUND, API_SERVICE_NAME, API_VERSION, API_SCOPES, API_KEYS, CLIENT_FILES, meowBotEmojiMain, meowBotEmojiReplace
         API_CONFIG_FILE = urlopen("https://gitlab.com/OpenSourceBlackCat/meowbotassets/-/raw/main/config/internalMeowBotSetting.json")
         API_CONFIG = json.load(API_CONFIG_FILE)
         # BOT STYLE
@@ -132,14 +132,11 @@ try:
             global youtubeBan
             youtubeMain = build(API_SERVICE_NAME, API_VERSION, credentials=credentials)
             youtubeBan = build(API_SERVICE_NAME, API_VERSION, developerKey=API_KEY, credentials=credentials)
-            print(vidlink)
             livechatrequest = youtubeMain.videos().list(
                 part="liveStreamingDetails",
                 id=vidlink
             )
             livechatid = livechatrequest.execute()
-            print("\n")
-            print(livechatid)
             livechatid = livechatid["items"][0]["liveStreamingDetails"]["activeLiveChatId"]
             botNameUpper = botName.upper()
             insert_comment(messagetext=f"{botNameUpper} BOT IS RUNNING SUCCESSFULLY.")
