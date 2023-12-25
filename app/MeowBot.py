@@ -1,5 +1,7 @@
 # Some Important Python Modules For Runing This Bot.
 from gtts import gTTS
+import os, sys
+sys.path.append(os.path.dirname(os.path.dirname(os.path.realpath(__file__))))
 import pytchat
 from threading import Thread
 from colorama import Fore
@@ -14,7 +16,6 @@ import MeowSounds
 from MeowSponsors import sponsorFileCheck
 import webbrowser
 from urllib.request import urlopen
-import os
 from re import IGNORECASE, search as research
 from time import sleep
 import pyjokes
