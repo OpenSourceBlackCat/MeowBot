@@ -1,3 +1,3 @@
 versionMain = 1.0
-version = "\nMeowBot"
+version = f"\nMeowBot {versionMain}"
 changelog = ".\nInitial Release.\n"
