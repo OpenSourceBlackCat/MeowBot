@@ -68,9 +68,9 @@ def configRun():
             MeowBotConfigDefault = load(urlopen(MeowBotConfigUrl))
             with open("config/MeowBotConfig.json", "w") as configDefault:
                 configDefault.write(str(MeowBotConfigDefault).replace("'", '"'))
-            configCheck(meowBotConfig=load(configDefault))
+                configCheck(meowBotConfig=load(configDefault))
     else:
         MeowBotConfigDefault = load(urlopen(MeowBotConfigUrl))
         with open("config/MeowBotConfig.json", "w") as configDefault:
             configDefault.write(str(MeowBotConfigDefault).replace("'", '"'))
-        configCheck(meowBotConfig=load(configDefault))
+            configCheck(meowBotConfig=load(configDefault))
