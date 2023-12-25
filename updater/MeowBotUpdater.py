@@ -1,4 +1,4 @@
-nnfrom tkinter import Tk, Label, Button, Canvas, NW
+from tkinter import Tk, Label, Button, Canvas, NW
 import requests
 from PIL import Image, ImageTk
 from urllib.request import urlopen
@@ -40,25 +40,25 @@ def mainDownload():
         downloadDone = Label(root, text="MEOW BOT Has Been Updated Successfully.", background='green', foreground='white').pack()
         reload(AC)
         updateversionLabel = Label(root, text=f"Updated Version: {AC.version}", background='green', foreground='white').pack()
-        openMeowChannellog()
+        openMeowChangeLog()
     except Exception as e:
         printError('Error!', e)
         
-def openMeowChannellog():
-    def showMeowChannellog():
-        def hideMeowChannellog():
+def openMeowChangeLog():
+    def showMeowChangeLog():
+        def hideMeowChangeLog():
             root.geometry("300x300")
             changeslog.destroy()
-            closeMeowChannellog.destroy()
-            openMeowChannellog()
+            closeMeowChangeLog.destroy()
+            openMeowChangeLog()
         root.geometry("300x500")
-        openchannellog.destroy()
-        closeMeowChannellog = Button(root, text="Hide Channel Log", background='green', foreground='white', command=hideMeowChannellog)
-        closeMeowChannellog.pack()
-        changeslog = Label(root, text=f"{AC.channellog}", background='green', foreground='white')
+        openchangelog.destroy()
+        closeMeowChangeLog = Button(root, text="Hide Channel Log", background='green', foreground='white', command=hideMeowChangeLog)
+        closeMeowChangeLog.pack()
+        changeslog = Label(root, text=f"{AC.changelog}", background='green', foreground='white')
         changeslog.pack()
-    openchannellog = Button(root, text="Show Channel Log", background='green', foreground='white', command=showMeowChannellog) 
-    openchannellog.pack()
+    openchangelog = Button(root, text="Show Channel Log", background='green', foreground='white', command=showMeowChangeLog) 
+    openchangelog.pack()
 def main():
     global root, updateEnter
     root = Tk()

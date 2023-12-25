@@ -3,9 +3,9 @@ from sys import path as spath
 for path in listdir("."):
 	if opath.isdir(path):
 		spath.append(opath.abspath(path))
-from MeowBot import mainGui
+from app import MeowBot
 from os import system
 from colorama import init
 system("cls")
 init()
-mainGui()
+MeowBot.mainGui()
