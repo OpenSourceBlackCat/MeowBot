@@ -138,6 +138,7 @@ try:
                 id=vidlink
             )
             livechatid = livechatrequest.execute()
+            print(livechatid)
             livechatid = livechatid["items"][0]["liveStreamingDetails"]["activeLiveChatId"]
             botNameUpper = botName.upper()
             insert_comment(messagetext=f"{botNameUpper} BOT IS RUNNING SUCCESSFULLY.")
