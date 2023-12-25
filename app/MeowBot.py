@@ -2,6 +2,7 @@
 from gtts import gTTS
 import os, sys
 sys.path.append(os.path.dirname(os.path.dirname(os.path.realpath(__file__))))
+import tools
 import pytchat
 from threading import Thread
 from colorama import Fore
@@ -83,37 +84,7 @@ try:
         # CLIENT FILES
         CLIENT_FILES = API_CONFIG["MEOWBOTAPI"]["botClientJsonFiles"]
         return None
-        
-    # def botAuthenticator():
-    #     global authenticator
-    #     authenticator = "https://github.com/OpenSourceBlackCat/MeowBotAssets/raw/main/JSON/authBot.json"
-    #     def authBot():
-    #         key = open("key.txt", "r")
-    #         keyText = key.readline()
-    #         keyFile = urlopen(authenticator)
-    #         keyData = json.loads(keyFile.read())
-    #         try:
-    #             if keyText in keyData["Keys"]:
-    #                 printGood("Verification Successfull")
-    #                 configValidate()
-    #             else:
-    #                 printError("Verification Failed!")
-    #                 printError("Invalid Key!")
-    #                 addKey()
-    #         except:
-    #             printError("Verification Failed!")
-    #             printError("Invalid Key!")
-    #             addKey()
-    #     def addKey():
-    #         keyInp = str(input(Fore.BLUE+"Enter Your KEY Here : "+Fore.RESET))
-    #         key = open("key.txt", "w")
-    #         key.write(keyInp)
-    #         key.close()
-    #         authBot()
-    #     if exists("key.txt"):
-    #         authBot()
-    #     else:
-    #         addKey()
+
     def timeInMin(time):
         timeMin = time / 60
         if timeMin == float(f"{int(timeMin)}.0"):
@@ -469,7 +440,7 @@ try:
     def sponsorVoice(sponsorChat):
         sponsorVoice = gTTS(sponsorChat, lang='hi', tld='co.in', slow=False)
         sponsorVoice.save('sponsorVoice.mp3')
-        os.system("../tools/mpg123.exe --realtime sponsorVoice.mp3")
+        os.system("mpg123.exe --realtime sponsorVoice.mp3")
 
     def linkCheck():
         if ":" in c.message or "/" in c.message or "." in c.message:
