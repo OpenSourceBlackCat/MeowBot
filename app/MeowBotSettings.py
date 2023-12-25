@@ -53,13 +53,13 @@ def configValidator(meowBotConfig, configFunction ,optionConfig, inputString):
         
 def configCheck(meowBotConfig):
     jsonFetch()
-    print("Meow Meow Meow!!!!", meowBotConfig)
+    print(meowBotConfig)
     for i in range(len(configBotFunction)):
         print(meowBotConfig, configBotFunction[i], optionBotConfig[i])
         configValidator(meowBotConfig=meowBotConfig, configFunction=configBotFunction[i], optionConfig=optionBotConfig[i], inputString=inputBotString[i])
     
 def configRun():
-    if exists("MeowBotConfig.json"):
+    if exists("config/MeowBotConfig.json"):
         meowBotConfigFile = open("config/MeowBotConfig.json", "r")
         try:
             meowBotConfig = load(meowBotConfigFile)
