@@ -1,7 +1,8 @@
 # Some Important Python Modules For Runing This Bot.
 from gtts import gTTS
 import os, sys
-mainPath = sys.path.append(os.path.dirname(os.path.dirname(os.path.realpath(__file__))))
+mainPath = os.path.dirname(os.path.dirname(os.path.realpath(__file__)))
+sys.path.append(mainPath)
 import pytchat
 from threading import Thread
 from colorama import Fore
