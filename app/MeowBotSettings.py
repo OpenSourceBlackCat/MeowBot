@@ -74,4 +74,3 @@ def configRun():
         print(MeowBotConfigDefault)
         with open("config/MeowBotConfig.json", "w") as configDefault:
             configDefault.write(str(MeowBotConfigDefault))
-        configRun()
