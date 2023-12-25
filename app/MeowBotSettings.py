@@ -73,3 +73,4 @@ def configRun():
         MeowBotConfigDefault = load(urlopen(MeowBotConfigUrl))
         with open("config/MeowBotConfig.json", "w") as configDefault:
             configDefault.write(str(MeowBotConfigDefault).replace("'", '"'))
+        configRun()
