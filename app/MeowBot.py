@@ -7,7 +7,7 @@ import logging as botLog
 from pyfiglet import figlet_format
 from MeowSounds import funnySounds
 from MeowBotSettings import configRun
-from MeowChangelog import version
+from ..updater.MeowChangelog import version
 from MeowEmoji import emojiCheck
 from MeowAutoReplyChatBot import mainChatBot
 import MeowSounds
