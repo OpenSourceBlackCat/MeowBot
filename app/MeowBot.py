@@ -134,7 +134,7 @@ try:
             youtubeBan = build(API_SERVICE_NAME, API_VERSION, developerKey=API_KEY, credentials=credentials)
                 
             livechatrequest = youtubeMain.videos().list(
-                part="liveStreamingDetails",
+                #part="liveStreamingDetails",
                 id=vidlink
             )
             livechatid = livechatrequest.execute()
