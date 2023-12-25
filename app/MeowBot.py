@@ -225,7 +225,8 @@ try:
                             return None   
                     else: 
                         pass          
-        except:
+        except Exception as e:
+            printError(e)
             printError("Error In Word Count")
     
     def wordSpamCheck():

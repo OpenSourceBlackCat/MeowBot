@@ -26,7 +26,8 @@ def emojiCheck(timeInMin, chatMod, insert_comment, Author, chatMessage):
                     for x in emojiMain:
                         chatMessage = resubn(pattern=emojiPattern, repl=translator.translate(text=x, dest="hi").text, string=chatMessage, count=1)[0]
                 except Exception as e:
-                    printError("Some Error In Emoji", e)
+                    printError(e)
+                    printError("Some Error In Emoji")
             elif counter > configValidate():
                 chatMessage = emoji.emojize(chatMessage)
                 chatMessage = emoji.replace_emoji(chatMessage, '')
