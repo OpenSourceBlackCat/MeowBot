@@ -2,7 +2,6 @@
 from gtts import gTTS
 import os, sys
 sys.path.append(os.path.dirname(os.path.dirname(os.path.realpath(__file__))))
-print(os.path.dirname(os.path.dirname(os.path.realpath(__file__))))
 import pytchat
 from threading import Thread
 from colorama import Fore
@@ -10,7 +9,7 @@ import logging as botLog
 from pyfiglet import figlet_format
 from MeowSounds import funnySounds
 from MeowBotSettings import configRun
-from ..updater.MeowChangelog import version
+from updater.MeowChangelog import version
 from MeowEmoji import emojiCheck
 from MeowAutoReplyChatBot import mainChatBot
 import MeowSounds
