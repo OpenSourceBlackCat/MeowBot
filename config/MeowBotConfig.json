@@ -1,1 +1,1 @@
-{"MeowBotConfig": {}}
+{"MeowBotConfig": {"botName": "ameyabot", "botUrl": "meow", "readingBot": "all", "readAllChats": "all", "autoReplyChatBot": "all", "welcomeUser": "all", "welcomeMusic": "sponsor", "funnySounds": "all", "jokes": "all", "emojiLimit": "5", "wordLimit": "5", "sayDelay": "5", "timeOutTimeNormal": "5", "timeOutTimeMod": "5"}}

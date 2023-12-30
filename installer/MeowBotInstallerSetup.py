@@ -29,10 +29,12 @@ def fileLoader():
         except: pass
     internalMeowBotConfigFile = urlopen("https://gitlab.com/OpenSourceBlackCat/MeowBotAssets/-/raw/main/config/internalMeowBotSetting.json")
     internalMeowBotConfig = load(internalMeowBotConfigFile)
+    botFolds = internalMeowBotConfig["MeowBotUpdaterFiles"]["fileFolds"]
     botFiles = internalMeowBotConfig["MeowBotUpdaterFiles"]["botFiles"]
-    botUrls = []
-    for i in internalMeowBotConfig["MeowBotUpdaterFiles"]["botUrls"]:
-        botUrls.append(internalMeowBotConfig["MeowBotUpdaterFiles"]["botUrls"][i])
+    botUrls = {}
+    for botFoldNum, botFold in enumerate(botFolds):
+        for botFile in range(len(botFiles[botFold])):
+            botUrls[botFolds.keys()[botFoldNum]] = f"{botFolds[botFold]}/{botFiles[botFold][botFile]}"
     mainDownload()
 def botFileDownloader(botFileUrl, botFileName):
     global dataDir
@@ -47,6 +49,7 @@ def botFileDownloader(botFileUrl, botFileName):
             os.mkdir(dataDir)
     myBotFile = requests.get(botFileUrl, allow_redirects=True)
     open(os.path.join(dataDir, botFileName), "wb").write(myBotFile.content)
+
 def shortCut(name, fileName, dataDir, desktopShortcut=False):
     import winshell, win32com.client, pythoncom
     pythoncom.CoInitialize()

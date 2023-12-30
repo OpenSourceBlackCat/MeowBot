@@ -1,0 +1,56 @@
+2023-12-30 20:04:29,945 - INFO - ##     ## ########  #######  ##      ##    ########   #######  ######## 
+###   ### ##       ##     ## ##  ##  ##    ##     ## ##     ##    ##    
+#### #### ##       ##     ## ##  ##  ##    ##     ## ##     ##    ##    
+## ### ## ######   ##     ## ##  ##  ##    ########  ##     ##    ##    
+##     ## ##       ##     ## ##  ##  ##    ##     ## ##     ##    ##    
+##     ## ##       ##     ## ##  ##  ##    ##     ## ##     ##    ##    
+##     ## ########  #######   ###  ###     ########   #######     ##    
+
+2023-12-30 20:04:29,946 - INFO - 
+MeowBot 1.0
+2023-12-30 20:04:35,672 - INFO - ##     ## ########  #######  ##      ##    ########   #######  ######## 
+###   ### ##       ##     ## ##  ##  ##    ##     ## ##     ##    ##    
+#### #### ##       ##     ## ##  ##  ##    ##     ## ##     ##    ##    
+## ### ## ######   ##     ## ##  ##  ##    ########  ##     ##    ##    
+##     ## ##       ##     ## ##  ##  ##    ##     ## ##     ##    ##    
+##     ## ##       ##     ## ##  ##  ##    ##     ## ##     ##    ##    
+##     ## ########  #######   ###  ###     ########   #######     ##    
+
+2023-12-30 20:04:35,672 - INFO - 
+MeowBot 1.0
+2023-12-30 20:05:11,052 - INFO - "GET /?state=1PpgmRDvxcGbhOwIzpDbfANbVb2nor&code=4/0AfJohXndgj4A8kH9Kyo8t7kDTUQcdtxFWDMHpVNYxbOTea-xVuNmHcObqrmLiHoLiN_Irw&scope=https://www.googleapis.com/auth/youtube.channel-memberships.creator%20https://www.googleapis.com/auth/youtube.force-ssl%20https://www.googleapis.com/auth/youtubepartner-channel-audit%20https://www.googleapis.com/auth/yt-analytics-monetary.readonly%20https://www.googleapis.com/auth/youtube.upload%20https://www.googleapis.com/auth/youtube.readonly%20https://www.googleapis.com/auth/youtubepartner%20https://www.googleapis.com/auth/yt-analytics.readonly%20https://www.googleapis.com/auth/youtube HTTP/1.1" 200 65
+2023-12-30 20:05:11,823 - INFO - file_cache is only supported with oauth2client<4.0.0
+2023-12-30 20:05:11,830 - INFO - file_cache is only supported with oauth2client<4.0.0
+2023-12-30 20:05:13,445 - INFO - Fetching Your YouTube Stream...
+2023-12-30 20:05:14,446 - INFO - Fetching Your Live Chats...
+2023-12-30 20:05:19,153 - INFO - FRIXXY_ICG - amey , welcome to my channel!
+2023-12-30 20:05:19,153 - ERROR - 2023-12-30 20:05:15 - FRIXXY_ICG - amey , welcome to my channel!
+2023-12-30 20:05:25,844 - INFO - Ameya - !say aur bhai kaise ho?
+2023-12-30 20:05:25,845 - INFO - 2023-12-30 20:05:25 - Ameya - !say aur bhai kaise ho?
+2023-12-30 20:05:34,739 - INFO - Ameya - !weather mumbai
+2023-12-30 20:05:34,739 - INFO - 2023-12-30 20:05:33 - Ameya - !weather mumbai
+2023-12-30 20:05:34,739 - INFO - Ameya
+2023-12-30 20:05:35,346 - WARNING - Encountered 403 Forbidden with reason "forbidden"
+2023-12-30 20:05:35,346 - ERROR - <HttpError 403 when requesting https://youtube.googleapis.com/youtube/v3/liveChat/messages?part=snippet&alt=json returned "The message could not be created because of insufficient permissions.". Details: "[{'message': 'The message could not be created because of insufficient permissions.', 'domain': 'youtube.liveChat', 'reason': 'forbidden'}]">
+2023-12-30 20:05:59,480 - INFO - Ameya - !weather mumbai
+2023-12-30 20:05:59,481 - INFO - 2023-12-30 20:05:59 - Ameya - !weather mumbai
+2023-12-30 20:05:59,481 - INFO - Ameya
+2023-12-30 20:06:15,296 - INFO - Ameya - !mysubs
+2023-12-30 20:06:15,297 - INFO - 2023-12-30 20:06:14 - Ameya - !mysubs
+2023-12-30 20:06:15,297 - INFO - Ameya
+2023-12-30 20:06:49,583 - INFO - Ameya - !say \u0916\u0941\u0936\u0940 \u0915\u0947 \u0906\u0901\u0938\u0942 \u0915\u0947 \u0938\u093e\u0925 \u091a\u0947\u0939\u0930\u093e\u0916\u0941\u0936\u0940 \u0915\u0947 \u0906\u0901\u0938\u0942 \u0915\u0947 \u0938\u093e\u0925 \u091a\u0947\u0939\u0930\u093e
+2023-12-30 20:06:49,584 - INFO - 2023-12-30 20:06:45 - Ameya - !say \u0916\u0941\u0936\u0940 \u0915\u0947 \u0906\u0901\u0938\u0942 \u0915\u0947 \u0938\u093e\u0925 \u091a\u0947\u0939\u0930\u093e\u0916\u0941\u0936\u0940 \u0915\u0947 \u0906\u0901\u0938\u0942 \u0915\u0947 \u0938\u093e\u0925 \u091a\u0947\u0939\u0930\u093e
+2023-12-30 20:06:55,987 - INFO - TBGxGOJO - !mysubs
+2023-12-30 20:06:55,987 - INFO - TBGxGOJO
+2023-12-30 20:07:05,758 - INFO - 2023-12-30 20:07:05 - Ameya - waise sir main abhi thoda sa spam karunga testing keliye chalega na?
+2023-12-30 20:07:30,534 - INFO - 2023-12-30 20:07:29 - Ameya - \U0001f602\U0001f602\U0001f602\U0001f602\U0001f602
+2023-12-30 20:07:43,072 - WARNING - Encountered 403 Forbidden with reason "insufficientPermissions"
+2023-12-30 20:07:43,072 - ERROR - Some Error In TimeOut!
+2023-12-30 20:07:44,121 - INFO - 2023-12-30 20:07:41 - Ameya - 
+2023-12-30 20:08:12,000 - WARNING - Encountered 403 Forbidden with reason "insufficientPermissions"
+2023-12-30 20:08:12,000 - ERROR - Some Error In TimeOut!
+2023-12-30 20:08:13,158 - INFO - 2023-12-30 20:08:11 - Ameya - meow meow meow meow meow meow meow meow
+2023-12-30 20:08:44,021 - INFO - 2023-12-30 20:08:43 - Ameya - dekho sir chal raha hai perfect koi issues nahi agar hote toh aap report kardena mereko isko git pe daalke aapko deta hun waise installation iska sahi karna hai bas
+2023-12-30 20:10:13,997 - INFO - FRIXXY_ICG - venomaster , welcome to my channel!
+2023-12-30 20:10:13,997 - ERROR - 2023-12-30 20:10:13 - FRIXXY_ICG - venomaster , welcome to my channel!
+2023-12-30 20:14:21,512 - INFO - 2023-12-30 20:14:21 - Ameya - installer bana raha bot ka bas ruko thodi der
